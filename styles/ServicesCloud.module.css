@@ -1,0 +1,105 @@
+.background {
+  min-height: 400px;
+  background-image: url('/backgroundGreen.jpg');
+  background-position-x: center;
+  background-size: cover;
+  padding: 1.5em 0;
+}
+
+.title {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.containerCircle {
+  width: 200px;
+  height: 200px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 1em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.circle {
+  width: 75px;
+  height: 75px;
+  border: 1px solid white;
+  background: white;
+  border-radius: 50%;
+}
+.button {
+  position: absolute;
+  background: var(--white-blue);
+  padding: .7em 1em;
+  border-radius: 4px;
+  font-size: .8em;
+  color: var(--green-sec);
+  border: none;
+  cursor: pointer;
+  transition: .4s;
+}
+.buttonSelected {
+  color: var(--dark-blue);
+  font-weight: bold;
+  background: white;
+  border-left: 6px solid var(--green-sec);
+  box-shadow: 2px 2px 12px 3px rgba(0, 0, 0, 0.5);
+  transition: .4s;
+}
+
+.one {
+  top: 6px;
+  left: -28px;
+}
+.two {
+  top: 6px;
+  right: -38px;
+}
+.three {
+  bottom: 6px;
+  left: 0px;
+}
+.four {
+  bottom: 6px;
+  right: -28px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.5em 2em;
+  width: 310px;
+  box-shadow: 2px 2px 20px 3px rgba(0, 0, 0, 0.7);
+  border-top: 14px solid var(--green-main);
+  border-bottom: 14px solid var(--green-main);
+  margin: 2em auto;
+  transition: 1s;
+}
+.cardTitle {
+
+}
+.description {
+  margin: 1em 0 2em;
+  font-weight: 400;
+  line-height: 1.65em;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  margin-bottom: .8em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.items:hover {
+  color: var(--orange-main);
+  text-decoration: underline;
+}
+.icon {
+  width: 22px;
+  margin-right: .5em;
+}

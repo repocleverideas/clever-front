@@ -1,0 +1,112 @@
+.background {
+  background: var(--white-blue);
+  /* background-image: url('/bg-home.png');
+  background-size: cover;
+  background-position-y: bottom;
+  background-position-x: center; */
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 5em; */
+  /* padding: 2em 0; */
+  /* position: relative; */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  padding: 1.5em;
+  text-align: center;
+}
+.title {
+  color: var(--orange-main);
+}
+
+.image {
+  width: 300px;
+}
+
+.skewed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* width: 100%; */
+  height: 600px;
+  background: var(--white-blue);
+  z-index: -1;
+  transform: skewY(-3deg);
+  transform-origin: top left;
+}
+.skewedEnd {
+  background: red;
+  width: 100%;
+  /* position: absolute;
+  bottom: -12px; */
+  height: 40px;
+  transform: skewY(-2deg);
+  margin-top: 3em;
+}
+
+.line {
+  height: 27px;
+  position: absolute;
+  transform: skewY(-1deg);
+  transform-origin: top left;
+}
+.left {
+  background: var(--gradient1);
+  width: 40%;
+  bottom: -3px;
+}
+.leftDown {
+  background: var(--gradient2);
+  width: 30%;
+  height: 30px;
+  bottom: -33px;
+  transform-origin: top left;
+}
+
+.right {
+  background: var(--gradient2);
+  width: 40%;
+  right: 0;
+  bottom: -1px;
+}
+.rightDown {
+  background: var(--gradient1);
+  width: 30%;
+  height: 30px;
+  bottom: -30px;
+  right: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .info {
+    flex-direction: row;
+    max-width: 1000px;
+    /* background: red; */
+    /* margin: 4em auto 0; */
+  }
+
+  .text {
+    padding: 0 1.5em;
+    text-align: left;
+  }
+  .title {
+    font-size: 2.5em;
+  }
+  .image {
+    width: 530px;
+  }
+
+  .skewed {
+    height: 600px;
+  }
+}

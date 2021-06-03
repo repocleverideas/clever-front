@@ -34,7 +34,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: var(--main-color);
   text-decoration: none;
 }
 

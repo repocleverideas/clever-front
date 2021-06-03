@@ -1,0 +1,66 @@
+.nav {
+  display: none;
+}
+
+.listItem {
+  margin-right: 1.5em;
+  padding: 1.2em;
+}
+.listItem:hover {
+  background: var(--orange-main);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.dropItem {
+  /* background: red; */
+  position: relative;
+}
+.menuDrop {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: -250px;
+  display: none;
+  /* height: 35px; */
+  padding: 1.2em;
+  /* width: 100%; */
+  /* background: var(--white-blue); */
+  background: var(--dark-blue);
+  box-shadow: 0px 3px 20px 3px rgb(166 173 190);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.dropItem:hover .menuDrop {
+  display: block;
+}
+.menuDrop:hover {
+  display: block;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+.serviceSection {
+  border-bottom: 1px solid red;
+  padding-bottom: 1em;
+}
+
+/* .button {
+  border: none;
+  background: var(--green-main);
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: bold;
+  height: fit-content;
+} */
+
+
+@media screen and (min-width: 426px) {
+  .nav {
+    display: flex;
+  }
+}
