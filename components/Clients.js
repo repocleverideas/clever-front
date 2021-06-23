@@ -10,19 +10,30 @@ function Clients({ data }) {
     threshold: 1
   })
 
-  const animation = intersection && intersection.isIntersecting > .5 && styles.anim
+  const animation = intersection && intersection.isIntersecting > .5 && styles.animation
 
   return (
-    <div className={styles.container}>
-      <h3 className={`${styles.title} ${animation}`} ref={intersectionRef}>
-        Clientes
+    <section className={styles.container}>
+      <div className={`${styles.content}`} ref={intersectionRef}>
+        <h3 className={styles.title}>{data.tile}</h3>
         <div className={styles.comments}>
-          <div className={styles.comment}>1</div>
-          <div className={styles.comment}>2</div>
-          <div className={styles.comment}>3</div>
+          {
+            data.client_item.map(item => (
+              <div key={item._id}>
+                <div  className={styles.comment}>
+                  <h4 className={styles.title_testimony}>{item.title_testimony}</h4>
+                  <p className={styles.description}>{item.description_testimony}</p>
+                </div>
+                <div className={styles.position}>
+                  <h5 className={styles.client}>{item.client}</h5>
+                  <p className={styles.position_text}>{item.client_posiiton}</p>
+                </div>
+              </div>
+            ))
+          }
         </div>
-      </h3>
-    </div>
+      </div>
+    </section>
   )
 }
 
