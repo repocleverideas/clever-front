@@ -25,6 +25,13 @@
 }
 .title {
   color: var(--orange-main);
+  animation: translateLeft .4s ease-in-out;
+}
+.description {
+  animation: translateLeft .4s ease-in-out .2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
 .image {
@@ -108,5 +115,16 @@
 
   .skewed {
     height: 600px;
+  }
+}
+
+@keyframes translateLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

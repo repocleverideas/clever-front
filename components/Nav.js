@@ -4,10 +4,10 @@ import styles from '../styles/Nav.module.css'
 function Nav() {
   return (
     <ul className={styles.nav}>
-      <li className={`${styles.listItem} ${styles.dropItem}`}>Servicios<img src="/arrDown.svg" width='15' alt="" />
+      <li className={`${styles.navItem} ${styles.dropItem}`}>Servicios<img src="/arrDown.svg" width='15' alt="" />
         <div className={styles.menuDrop}>
           <div className={styles.serviceSection}>
-            <h4>Oficina Virtual</h4>
+            <h4 className={styles.serviceTitle}>Oficina Virtual</h4>
             <div className={styles.services}>
               <p>Clever Linea</p>
               <p>Clever PBX</p>
@@ -26,9 +26,9 @@ function Nav() {
           </div>
         </div>
       </li>
-      <li className={styles.listItem}>Partners</li>
-      <li className={styles.listItem}>Soporte</li>
-      <li className={styles.listItem}>Conócenos</li>
+      <li className={styles.navItem}>Partners</li>
+      <li className={styles.navItem}>Soporte</li>
+      <li className={styles.navItem}>Conócenos</li>
       {/* <button className={`${styles.listItem} ${styles.button}`}>Charlemos</button> */}
     </ul>
   )

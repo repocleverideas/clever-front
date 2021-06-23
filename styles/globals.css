@@ -6,9 +6,11 @@
   --orange-main: #FF781C;
   --white-blue: rgba(242, 247, 255, 1);
   --white: #FFFFFF;
+  --blue: #D8F1F8;
   --gray-one: #D9DBE1;
   --gray-two: #EEEFF4;
   --dark-blue: #2F4858;
+  --dark: #18191F;
   --gradient1: linear-gradient(100deg, var(--green-main) 16.67%, var(--green-sec) 94.27%);
   --gradient2: linear-gradient(89.12deg, var(--orange-main) 35.55%, #F65163 99.66%);
 }
