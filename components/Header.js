@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import { Nav, Button } from '../components'
+import { Nav, Button, Language } from '../components'
 import styles from '../styles/Header.module.css'
 
 function Header() {
@@ -22,13 +22,14 @@ function Header() {
       </div>
       <nav className={styles.nav}>
         <Nav />
+        <Language />
         <Button>Charlemos</Button>
-        <select name="" id="" className={styles.select}>
-          <option value="">ES 🇪🇸</option>
-          <option value="">EN 🇺🇸</option>
-        </select>
-        <img src="/menu.svg" alt="menu" className={styles.menu_icon} onClick={handleMenu} />
-        <ul className={`${menu ? styles.menu_displayed : styles.menu_displayed_non}`}>
+        <div className={`${styles.menu_icon} ${menu && styles.menu_icon_open}`} onClick={handleMenu}>
+          <div className={styles.menu_bar}></div>
+          <div className={styles.menu_bar}></div>
+          <div className={styles.menu_bar}></div>
+        </div>
+        <ul className={`${styles.menu_hidden} ${menu && styles.displayed}`}>
           <li className={styles.listItem} onClick={handleServices}>Servicios <img src="/arrDown.svg" width='15' alt="" />
             <ul className={`${styles.servicesDrop} ${services && styles.servicesDropNon}`}>
               <li className={styles.subItem}>Servicio 1</li>

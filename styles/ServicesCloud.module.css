@@ -1,10 +1,14 @@
 .background {
-  min-height: 400px;
+  min-height: 500px;
   background-image: url('/backgroundGreen.jpg');
   background-position-x: center;
   background-size: cover;
   padding: 1.5em 0;
 }
+
+/* .container {
+  padding: auto;
+} */
 
 .title {
   color: var(--white);
@@ -79,7 +83,8 @@
   transition: 1s;
 }
 .cardTitle {
-
+  border-bottom: 2px solid var(--green-main);
+  padding-bottom: .4em;
 }
 .description {
   margin: 1em 0 2em;
@@ -102,4 +107,36 @@
 .icon {
   width: 22px;
   margin-right: .5em;
+}
+
+
+@media screen and (min-width: 700px) {
+  .container {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
+  .containerCircle {
+    width: 250px;
+    height: 250px;
+  }
+  .card {
+    margin: 0;
+    width: 350px;
+  }
+  .button {
+    font-size: 1em;
+  }
+
+  .title {
+    margin: 1em 0 2em;
+    font-size: 1.5em;
+  }
 }

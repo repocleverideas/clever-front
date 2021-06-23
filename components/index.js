@@ -4,6 +4,8 @@ import Hero from './Hero'
 import Button from './Button'
 import VideoMain from './VideoMain'
 import ServicesCloud from './ServicesCloud'
+import Clients from './Clients'
+import Language from './Language'
 
 export {
   Header,
@@ -11,5 +13,7 @@ export {
   Hero,
   Button,
   VideoMain,
-  ServicesCloud
+  ServicesCloud,
+  Clients,
+  Language
 }

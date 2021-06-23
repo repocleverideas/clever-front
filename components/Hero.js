@@ -1,15 +1,16 @@
 import React from 'react'
 import styles from '../styles/Hero.module.css'
 
-function Hero() {
+function Hero({ data }) {
+  // console.log(data)
   return (
     <div className={styles.background}>
       <div className={styles.info}>
         <div className={styles.text}>
-          <h1 className={styles.title}>Lleva tu negocio al siguiente nivel con Clever IDEAS</h1>
-          <p>Te apoyamos en la migración digital para que tu empresa alcance mayor productividad y eficiencia.</p>
+          <h1 className={styles.title}>{data.title}</h1>
+          <p className={styles.description}>{data.subtitle}</p>
         </div>
-        <img className={styles.image} src="/home-hero.png" alt="" />
+        <img className={styles.image} src={data.image.image.url} alt="" />
       </div>
       {/* <div className={styles.skewedEnd}>
         <div className={`${styles.line} ${styles.left}`}></div>

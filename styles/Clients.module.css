@@ -1,0 +1,39 @@
+.container {
+  height: 300px;
+  background: var(--dark-blue);
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  color: var(--white);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.anim {
+  /* animation: translateLeft 1s ease-in-out; */
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.comments {
+
+}
+.comment {
+  /* background: var(--white);
+  padding: 1em; */
+}
+
+@keyframes translateLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
