@@ -1,0 +1,46 @@
+.background {
+  padding: 2em 0;
+  color: var(--dark);
+}
+
+.title {
+  color: var(--orange-main);
+}
+
+.card {
+  background: var(--white-blue);
+  border-radius: 1em;
+  padding: 1em 1.5em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  margin: .5em 0;
+}
+
+.button {
+  border: none;
+  border: 1px solid var(--gray-one);
+  padding: 1em;
+  background: transparent;
+  border-radius: 8px;
+}
+.select {
+  background: var(--orange-main);
+  border: none;
+  color: var(--white);
+}
+
+.layout {
+  gap: 1.5em;
+  padding: 1em 0;
+}
+
+.feature_item {
+  /* background: tomato; */
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}

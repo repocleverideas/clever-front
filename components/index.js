@@ -6,6 +6,10 @@ import VideoMain from './VideoMain'
 import ServicesCloud from './ServicesCloud'
 import Clients from './Clients'
 import Language from './Language'
+import BrandsClients from './BrandsClients'
+import Cta from './Cta'
+import Benefits from './Benefits'
+import HeroServices from './HeroServices'
 
 export {
   Header,
@@ -15,5 +19,9 @@ export {
   VideoMain,
   ServicesCloud,
   Clients,
-  Language
+  Language,
+  BrandsClients,
+  Cta,
+  Benefits,
+  HeroServices
 }

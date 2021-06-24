@@ -1,0 +1,49 @@
+.background {
+  /* background: linear-gradient(100deg, var(--green-main) 16.67%, #68c649 44%); */
+  background: #68c649;
+  padding: 2em 0 0;
+}
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 85vw;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  padding: 2em 0;
+}
+
+.text {
+  text-align: center;
+  min-width: 250px;
+}
+
+.title {
+  color: var(--white);
+  font-size: 28px;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  background: var(--orange-main);
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: bold;
+  height: fit-content;
+  padding: 1em 2.5em;
+  font-size: .9em;
+  margin-top: 1em;
+}
+.button:hover {
+  /* background: var(--green-sec); */
+}
+
+@media screen and (min-width: 800px) {
+  .title {
+    font-size: 48px;
+  }
+}

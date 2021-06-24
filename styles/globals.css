@@ -43,3 +43,27 @@ li {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
+
+
+.column {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 85vw;
+  margin: 0 auto;
+  align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  .column {
+    width: 70vw;
+  }
+
+  .layout {
+    width: 70vw;
+  }
+}

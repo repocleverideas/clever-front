@@ -1,0 +1,30 @@
+.background {
+  margin-top: 4em;
+}
+
+.title {
+  color: var(--orange-main);
+}
+
+.question {
+  background: var(--gray-two);
+  padding: .5em 1em;
+  border-radius: 8px;
+  margin-top: 1em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.answer {
+  padding: 0 .5em;
+  margin-bottom: 2.5em;
+  font-size: .9em;
+}
+
+.select {
+  background: var(--gradient1);
+  color: var(--white);
+}
