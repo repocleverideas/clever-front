@@ -1,0 +1,4 @@
+.layout {
+  composes: layout from './Cta.module.css';
+  background: chocolate;
+}

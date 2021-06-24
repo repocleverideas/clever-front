@@ -12,12 +12,6 @@ function Hero({ data }) {
         </div>
         <img className={styles.image} src={data.image.image.url} alt="" />
       </div>
-      {/* <div className={styles.skewedEnd}>
-        <div className={`${styles.line} ${styles.left}`}></div>
-        <div className={`${styles.line} ${styles.leftDown}`}></div>
-        <div className={`${styles.line} ${styles.right}`}></div>
-        <div className={`${styles.line} ${styles.rightDown}`}></div>
-      </div> */}
     </div>
   )
 }
