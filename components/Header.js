@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { Nav, Button, Language } from '../components'
 import styles from '../styles/Header.module.css'
@@ -18,7 +19,9 @@ function Header() {
     <div className={styles.header}>
       {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
       <div className={styles.logoContainer}>
-        <Image src='/logo-black-h.png' alt='Clever Logo' layout='fill' priority />
+        <Link href='/'>
+          <a><Image src='/logo-black-h.png' alt='Clever Logo' layout='fill' priority /></a>
+        </Link>
       </div>
       <nav className={styles.nav}>
         <Nav />

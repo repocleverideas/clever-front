@@ -9,6 +9,7 @@ import Language from './Language'
 import BrandsClients from './BrandsClients'
 import Cta from './Cta'
 import Benefits from './Benefits'
+import HeroServices from './HeroServices'
 
 export {
   Header,
@@ -21,5 +22,6 @@ export {
   Language,
   BrandsClients,
   Cta,
-  Benefits
+  Benefits,
+  HeroServices
 }

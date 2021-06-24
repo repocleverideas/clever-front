@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from '../styles/Nav.module.css'
 
 function Nav() {
@@ -9,7 +10,7 @@ function Nav() {
           <div className={styles.serviceSection}>
             <h4 className={styles.serviceTitle}>Oficina Virtual</h4>
             <div className={styles.services}>
-              <p>Clever Linea</p>
+              <Link href='clever-linea'><p>Clever Linea</p></Link>
               <p>Clever PBX</p>
               <p>Clever Conference</p>
               <p>Clever Show</p>
