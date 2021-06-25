@@ -23,7 +23,7 @@ function Questions({ data }) {
               <div>
                 {
                   item.id === state &&
-                  <p className={styles.answer}>{data.question[0].description}</p>
+                  <p className={styles.answer}>{item.description}</p>
                 }
               </div>
             </div>

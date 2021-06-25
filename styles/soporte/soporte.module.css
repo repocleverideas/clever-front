@@ -1,0 +1,31 @@
+.text {
+  text-align: center;
+  margin: 3em;
+}
+
+.card {
+  background: var(--white-blue);
+  border-radius: 8px;
+  padding: 1em 1.5em;
+}
+
+.title {
+  color: var(--orange-main);
+  margin-bottom: .5em;
+}
+
+.subtitle {
+  color: var(--green-main);
+  margin-bottom: 1em;
+}
+
+.layout {
+  gap: 2em;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}

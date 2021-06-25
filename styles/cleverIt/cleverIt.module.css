@@ -1,0 +1,72 @@
+.background {
+  /* background: chocolate; */
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+}
+
+.imgContainer {
+  display: grid;
+  place-items: center;
+}
+
+.img {
+  width: 100%;
+}
+
+.text {
+  margin-bottom: 2em;
+}
+
+.title {
+  color: var(--orange-main);
+  font-size: 3em;
+}
+
+
+/* Features */
+.backFeatures {
+  background: var(--gradient1);
+  padding: 2.5em 0;
+}
+
+.titleFeat {
+  color: var(--white);
+  margin-bottom: 2em;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  width: 85vw;
+  margin: 0 auto;
+  gap: 1em;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 1em;
+  padding: 2em 1em;
+}
+
+.textFeature {
+  margin: 0 auto;
+}
+
+.titleBenefit {
+  color: var(--green-main);
+  font-size: 1.5em;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+@media screen and (min-width: 950px) {
+  .layout {
+    width: 50vw;
+  }
+}

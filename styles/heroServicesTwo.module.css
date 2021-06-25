@@ -1,0 +1,23 @@
+.background {
+  background: var(--white-blue);
+  padding: 3.5em 0;
+}
+
+.layout {
+  gap: 2em;
+}
+
+.title {
+  color: var(--orange-main);
+  font-size: 3em;
+}
+
+.text {
+  margin-bottom: 2em;
+}
+
+.imageContainer {
+  display: grid;
+  place-items: center;
+  margin-top: 1em;
+}
