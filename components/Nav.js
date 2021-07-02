@@ -51,9 +51,10 @@ function Nav() {
           </div>
         </div>
       </li>
-      <li className={styles.navItem}>Partners</li>
-      <li className={styles.navItem}>Soporte</li>
-      <li className={styles.navItem}>Conócenos</li>
+
+      <li className={styles.navItem}><Link href='/partners'>Partners</Link></li>
+      <li className={styles.navItem}><Link href='/soporte'>Soporte</Link></li>
+      <li className={styles.navItem}><Link href='/nosotros'>Conócenos</Link></li>
       {/* <button className={`${styles.listItem} ${styles.button}`}>Charlemos</button> */}
     </ul>
   )
