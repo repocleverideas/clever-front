@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from '../styles/language.module.css'
 import { useRouter } from 'next/router'
 
 function Language() {
@@ -17,9 +18,10 @@ function Language() {
       id="locale"
       onChange={changeLanguage}
       defaultValue={locale}
+      className={styles.select}
     >
-      <option value="es">ES</option>
-      <option value="en">EN</option>
+      <option value="es">ES 🇪🇸</option>
+      <option value="en">EN 🇺🇸</option>
     </select>
   )
 }

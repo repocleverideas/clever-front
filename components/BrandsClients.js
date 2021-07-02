@@ -1,9 +1,15 @@
 import React from 'react'
 import styles from '../styles/BrandsClients.module.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Pagination, Autoplay } from 'swiper'
+import 'swiper/swiper-bundle.css'
+
+SwiperCore.use([Pagination, Autoplay])
+
 
 function BrandsClients({ data }) {
   return (
-    <section className={styles.layout}>
+    <section className={`layout ${styles.background}`}>
       <div className={styles.text}>
         <h3 className={styles.title}>{data.title}</h3>
         <p className={styles.description}>{data.description}</p>

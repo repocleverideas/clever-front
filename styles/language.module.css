@@ -1,0 +1,11 @@
+.select {
+  margin-right: .7em;
+  /* background: chocolate; */
+  border-radius: 4px;
+  border: none;
+  padding: .4em .6em;
+  border: 2px solid var(--green-main);
+  color: var(--green-main);
+  font-weight: bold;
+  font-family: inherit;
+}

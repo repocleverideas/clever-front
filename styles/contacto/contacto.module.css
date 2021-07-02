@@ -1,0 +1,42 @@
+.title {
+  color: var(--orange-main);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.label {
+  display: block;
+}
+
+.input {
+  width: 95%;
+  background: var(--blue);
+  border: none;
+  padding: .7em;
+  border-radius: 6px;
+}
+
+.button {
+  composes: button from '../Button.module.css';
+  width: 150px;
+}
+
+
+.background {
+  height: 92vh;
+  background: var(--white-blue);
+  padding: 4em 0;
+  /* display: grid;
+  place-items: center; */
+}
+
+.cloud {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 350px;
+}

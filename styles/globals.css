@@ -52,7 +52,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   width: 85vw;
   margin: 0 auto;
   align-items: center;

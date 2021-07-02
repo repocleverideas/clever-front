@@ -1,0 +1,23 @@
+.button {
+  composes: button from '../Benefits.module.css';
+}
+.select {
+  composes: select from '../Benefits.module.css';
+}
+.buttons {
+  composes: buttons from '../Benefits.module.css';
+  margin-top: 2em;
+}
+
+.title {
+  color: var(--orange-main);
+  margin-top: 4em;
+}
+
+.imgContainer {
+  margin: 5em 0;
+}
+
+.image {
+  width: 100%;
+}

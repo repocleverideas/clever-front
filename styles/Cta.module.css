@@ -1,7 +1,7 @@
 .background {
   /* background: linear-gradient(100deg, var(--green-main) 16.67%, #68c649 44%); */
   background: #68c649;
-  padding: 2em 0 0;
+  padding: 2em 0 3em;
 }
 .layout {
   display: grid;

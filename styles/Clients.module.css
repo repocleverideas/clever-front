@@ -3,7 +3,7 @@
   background: var(--dark-blue);
   /* display: grid;
   place-items: center; */
-  padding: 2em 0;
+  padding: 4em 0;
 }
 
 .content {
@@ -22,18 +22,15 @@
 
 .title {
   text-align: center;
-  margin: 0 0 1.5em;
   color: var(--green-main);
+  margin-bottom: 1em ;
 }
 
-.comments {
-  margin: 0 auto;
-  width: 85vw;
-  display: grid;
+.gap {
   gap: 1em;
-  /* grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: flex-start;
 }
+
 .comment {
   background: var(--blue);
   color: var(--dark);

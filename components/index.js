@@ -10,6 +10,9 @@ import BrandsClients from './BrandsClients'
 import Cta from './Cta'
 import Benefits from './Benefits'
 import HeroServices from './HeroServices'
+import HeroServicesTwo from './HeroServicesTwo'
+import Locations from './soporte/Locations'
+import Footer from './Footer'
 
 export {
   Header,
@@ -23,5 +26,8 @@ export {
   BrandsClients,
   Cta,
   Benefits,
-  HeroServices
+  HeroServices,
+  HeroServicesTwo,
+  Locations,
+  Footer
 }

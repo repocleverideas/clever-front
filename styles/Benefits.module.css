@@ -1,6 +1,6 @@
 .background {
   background: var(--white-blue);
-  padding: 4em 0;
+  padding: 5em 0;
 }
 
 .content {
@@ -15,8 +15,10 @@
 
 .buttons {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  margin-bottom: 1.5em;
+  gap: 1em;
+  margin-bottom: 1em;
 }
 
 
@@ -39,5 +41,9 @@
 @media screen and (min-width: 800px) {
   .content {
     width: 50vw;
+  }
+
+  .buttons {
+    flex-direction: row;
   }
 }

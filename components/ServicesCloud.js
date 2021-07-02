@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from '../styles/ServicesCloud.module.css'
-
+import Link from 'next/link'
 
 
 function ServicesCloud({ data, title }) {
@@ -14,7 +14,8 @@ function ServicesCloud({ data, title }) {
   return (
     <section className={styles.background}>
       <h3 className={styles.title}>{title}</h3>
-      <div className={styles.container}>
+
+      <div className={`layout ${styles.gap}`}>
         <div className={styles.containerCircle}>
           <div className={styles.circle}></div>
           <button onClick={changeSelect} value={0} className={`${styles.button} ${styles.one} ${select == 0 && styles.buttonSelected}`}>{data[0].title}</button>
@@ -26,14 +27,17 @@ function ServicesCloud({ data, title }) {
 
 
         <div className={styles.card}>
-        <h4 className={styles.cardTitle}>{data[select]?.title}</h4>
-        <h5 className={styles.description}>{data[select].description}</h5>
-        {
-          data[select].product.map(item => (
-            <div key={item} className={styles.items}><img src="/check.svg" alt="" className={styles.icon} />{item.feature_title}</div>
-          ))
-        }
-      </div>
+          <h4 className={styles.cardTitle}>{data[select]?.title}</h4>
+          <h5 className={styles.description}>{data[select].description}</h5>
+          {
+            data[select].product.map(item => (
+              <div key={item.id} className={styles.items}>
+                <img src="/check.svg" alt="" className={styles.icon} />
+                <Link href={item.link}>{item.feature_title}</Link>
+              </div>
+            ))
+          }
+        </div>
       </div>
     </section>
   )

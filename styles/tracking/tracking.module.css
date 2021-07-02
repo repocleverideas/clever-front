@@ -1,0 +1,87 @@
+.background {
+  /* background: var(--gradient1); */
+  min-height: 75vh;
+  display: grid;
+  place-items: center;
+}
+
+.imgContainer {
+  display: grid;
+  place-items: center;
+}
+
+.img {
+  width: 80%;
+}
+
+.text {
+  margin-bottom: 2em;
+}
+
+.title {
+  color: var(--orange-main);
+  font-size: 2em;
+}
+
+.category {
+  color: var(--green-main);
+}
+
+.description {
+  /* text-align: center; */
+  font-size: 1em;
+  /* font-weight: bold; */
+  /* background: var(--dark-blue); */
+  color: var(--dark-blue);
+  line-height: 1.7em;
+  margin-bottom: 2em;
+}
+
+
+.gap {
+  gap: 1em;
+  align-items: initial;
+}
+
+
+.titleFeat {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.backgroundValue {
+  padding: 4em 0;
+  margin-top: 4em;
+  background: var(--green-sec);
+}
+
+.cardValue {
+  background: var(--gradient1);
+  color: var(--white);
+  padding: 1.5em;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.backgroundFeature {
+  padding: 4em 0;
+}
+
+.cardFeature {
+  padding: 1.5em;
+  background: var(--gradient2);
+  color: var(--white);
+  border-radius: 1em;
+}
+
+.titleCard {
+  margin-top: 1em;
+}
+
+.titleDiferent {
+  color: var(--green-main);
+  margin-bottom: 1em;
+}
+.subtitleDiferent {
+  margin-bottom: 2em;
+}
