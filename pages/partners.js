@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, HeroServicesTwo } from '../components'
+import { Header, HeroServicesTwo, Footer } from '../components'
 import { Information } from '../components/partners'
 
 function partners(data) {
@@ -8,6 +8,7 @@ function partners(data) {
       <Header />
       <HeroServicesTwo data={data.hero} />
       <Information data={data.information} image={data.image} />
+      <Footer />
     </div>
   )
 }
@@ -16,7 +17,7 @@ export default partners
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`http://localhost:1337/partners`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/partners`)
   const data = await res.json()
 
   return {

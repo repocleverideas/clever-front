@@ -6,17 +6,17 @@
   padding: 3em 0;
 }
 
-.container {
+.gap {
   /* min-width: 800px; */
   /* margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between; */
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   align-items: center;
-  justify-items: center;
-  gap: 1em;
+  justify-items: center; */
+  gap: 1.5em;
 }
 
 .title {
@@ -79,6 +79,8 @@
   right: -28px;
 }
 
+
+
 .card {
   background: var(--white);
   border-radius: 8px;
@@ -86,7 +88,7 @@
   border-top: 10px solid var(--green-main);
   border-bottom: 10px solid var(--green-main);
   padding: 1.5em 2em;
-  width: 85vw;
+  /* width: 85vw; */
   /* margin: 2em auto; */
   transition: 1s;
 }

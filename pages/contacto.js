@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from '../styles/contacto/contacto.module.css'
-import { Header } from '../components'
+import { Header, Footer } from '../components'
 
 function contacto(data) {
   const [state, setState] = useState()
@@ -13,8 +13,62 @@ function contacto(data) {
 
   const handleSend = (e) => {
     e.preventDefault()
-    console.log(state)
+    // console.log(state)
+
+    const xhr = new XMLHttpRequest()
+    const url = 'https://api.hsforms.com/submissions/v3/integration/submit/20346131/9fb8bbc9-c38e-47e0-9f7b-5b50ec195072'
+
+    const data = {
+      fields: [
+        {
+          "name": "firstname",
+          "value": state.name
+        },
+        {
+          "name": "email",
+          "value": state.mail
+        },
+        {
+          "name": "message",
+          "value": state.service
+        }
+      ],
+      "legalConsentOptions":{ // Include this object when GDPR options are enabled
+        "consent":{
+          "consentToProcess":true,
+          "text":"I agree to allow Example Company to store and process my personal data.",
+          "communications":[
+            {
+              "value":true,
+              "subscriptionTypeId":999,
+              "text":"I agree to receive marketing communications from Example Company."
+            }
+          ]
+        }
+      }
+    }
+
+    const finalData = JSON.stringify(data)
+
+    xhr.open('POST', url)
+
+    xhr.setRequestHeader('Content-Type', 'application/json')
+
+    xhr.onreadystatechange = function() {
+      if(xhr.readyState == 4 && xhr.status == 200) {
+        alert(xhr.responseText); // Returns a 200 response if the submission is successful.
+      } else if (xhr.readyState == 4 && xhr.status == 400){
+        alert(xhr.responseText); // Returns a 400 error the submission is rejected.
+      } else if (xhr.readyState == 4 && xhr.status == 403){
+          alert(xhr.responseText); // Returns a 403 error if the portal isn't allowed to post submissions.
+      } else if (xhr.readyState == 4 && xhr.status == 404){
+          alert(xhr.responseText); //Returns a 404 error if the formGuid isn't found
+      }
+    }
+
+    xhr.send(finalData)
   }
+
 
   return (
     <>
@@ -62,6 +116,8 @@ function contacto(data) {
         </div>
         {/* <img src="/circle-cloud.svg" alt=""  className={styles.cloud} /> */}
       </section>
+
+      <Footer />
     </>
   )
 }
@@ -70,7 +126,7 @@ export default contacto
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`http://localhost:1337/contacto`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/contacto`)
   const data = await res.json()
 
   return {

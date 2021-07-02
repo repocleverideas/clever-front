@@ -1,9 +1,9 @@
 .background {
   background: var(--white-blue);
-  /* background-image: url('/bg-home.png');
+  background-image: url('/backExp.png');
   background-size: cover;
   background-position-y: bottom;
-  background-position-x: center; */
+  background-position-x: center;
   height: 85vh;
   display: flex;
   align-items: center;

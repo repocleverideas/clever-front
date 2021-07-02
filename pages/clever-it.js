@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/cleverIt/cleverIt.module.css'
-import { Header } from '../components'
+import { Header, Footer } from '../components'
 import Features from '../components/it/Features'
 import Softwares from '../components/it/Softwares'
 
@@ -20,9 +20,10 @@ function cleverIt(data) {
         </div>
       </section>
       <Features data={data.features} />
+      <Softwares data={data.softwares} />
 
       <div className={styles.background}>
-        <div className={`layout`}>
+        <div className={`layout ${styles.gap}`}>
           <div className={styles.imgContainer}>
             <img className={styles.img} src={data.imageFeature.url} alt="" />
           </div>
@@ -39,7 +40,7 @@ function cleverIt(data) {
         </div>
       </div>
 
-      <Softwares />
+      <Footer />
     </div>
   )
 }
@@ -48,7 +49,7 @@ export default cleverIt
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`http://localhost:1337/clever-it`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/clever-it`)
   const data = await res.json()
 
   return {

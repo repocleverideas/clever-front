@@ -15,8 +15,8 @@ function Clients({ data }) {
   return (
     <section className={styles.container}>
       <div className={`${styles.content}`} ref={intersectionRef}>
-        <h3 className={styles.title}>{data.tile}</h3>
-        <div className={styles.comments}>
+        <h3 className={`column ${styles.title}`}>{data.tile}</h3>
+        <div className={`layout ${styles.gap}`}>
           {
             data.client_item.map(item => (
               <div key={item._id}>

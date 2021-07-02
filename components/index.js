@@ -12,6 +12,7 @@ import Benefits from './Benefits'
 import HeroServices from './HeroServices'
 import HeroServicesTwo from './HeroServicesTwo'
 import Locations from './soporte/Locations'
+import Footer from './Footer'
 
 export {
   Header,
@@ -27,5 +28,6 @@ export {
   Benefits,
   HeroServices,
   HeroServicesTwo,
-  Locations
+  Locations,
+  Footer
 }

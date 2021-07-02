@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header } from '../components'
+import { Header, Footer } from '../components'
 import styles from '../styles/nosotros/nosotros.module.css'
 
 function nosotros(data) {
@@ -32,17 +32,19 @@ function nosotros(data) {
         </div>
       </section>
 
-        <div className={styles.background}>
-          <div className={`layout ${styles.certification}`}>
-            <div>
-              <h2 className={styles.title_certification}>{data.certification}</h2>
-              <p>{data.certification_desciprtion}</p>
-            </div>
-            <div className={styles.imageContainer}>
-              <img className={styles.image} src={data.certification_image.url} alt="" />
-            </div>
+      <div className={styles.background}>
+        <div className={`layout ${styles.certification}`}>
+          <div>
+            <h2 className={styles.title_certification}>{data.certification}</h2>
+            <p>{data.certification_desciprtion}</p>
+          </div>
+          <div className={styles.imageContainer}>
+            <img className={styles.image} src={data.certification_image.url} alt="" />
           </div>
         </div>
+      </div>
+
+      <Footer />
     </>
   )
 }
@@ -52,7 +54,7 @@ export default nosotros
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`http://localhost:1337/nosotros`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/nosotros`)
   const data = await res.json()
 
   return {

@@ -1,0 +1,42 @@
+.footer {
+  background: var(--dark);
+  color: var(--white);
+  padding: 3em 0;
+  position: relative;
+}
+
+.imgContainer {
+  display: grid;
+  place-items: center;
+}
+
+.img {
+  width: 50%;
+}
+
+.title {
+  color: var(--green-main);
+}
+
+
+.gap {
+  align-items: initial;
+}
+
+.copy {
+  font-size: .8em;
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  /* background: red; */
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+
+.social {
+  margin: 2em 0;
+  display: flex;
+  justify-content: space-evenly;
+}

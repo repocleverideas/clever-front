@@ -2,7 +2,6 @@ import React from 'react'
 import styles from '../styles/HeroServices.module.css'
 
 function HeroServices({ data }) {
-  console.log(data)
   return (
     <section className={styles.background}>
       <div className={styles.layout}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeroServicesTwo, Header, Locations } from '../components'
+import { HeroServicesTwo, Header, Locations, Footer } from '../components'
 import styles from '../styles/soporte/soporte.module.css'
 
 function soporte(data) {
@@ -12,6 +12,7 @@ function soporte(data) {
         <h4>{data.subtitle}</h4>
       </div>
       <Locations data={data.location} />
+      <Footer />
     </div>
   )
 }
@@ -20,7 +21,7 @@ export default soporte
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`http://localhost:1337/soporte`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/soporte`)
   const data = await res.json()
 
   return {

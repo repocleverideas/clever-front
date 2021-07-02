@@ -1,0 +1,75 @@
+.background {
+  /* background: chocolate; */
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+}
+
+.imgContainer {
+  display: grid;
+  place-items: center;
+}
+
+.img {
+  width: 80%;
+}
+
+.text {
+  margin-bottom: 2em;
+}
+
+.title {
+  color: var(--orange-main);
+  font-size: 3em;
+}
+
+.category {
+  color: var(--green-main);
+}
+
+
+/* Features */
+.backgroundFeat {
+  background: var(--white-blue);
+  padding: 4em 0;
+}
+
+.titleFeat {
+  text-align: center;
+  margin-bottom: 1em;
+  color: var(--green-main);
+}
+
+.card {
+  background: var(--blue);
+  text-align: center;
+  border-radius: 8px;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.gap {
+  gap: 2em;
+  /* place-items: center; */
+}
+
+
+/* Value */
+.backgroundValue {
+  background: var(--gradient2);
+  padding: 4em 0;
+  color: var(--white);
+  /* margin-top: 2em; */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+
+
+.backgroundServer {
+  padding: 5em 0;
+}
