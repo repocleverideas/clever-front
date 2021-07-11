@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import styles from '../styles/Footer.module.css'
 
 const es = {
@@ -38,6 +39,12 @@ function Footer() {
         </div>
       </div>
       <div className={styles.copy}>© Copyright 2021 | Clever IDEAS</div>
+
+      <div>
+        <Link href='/pua'><a>PUA</a></Link>
+        <Link href='/terminos-de-venta'><a>Términos de venta</a></Link>
+        <Link href='/privacidad'><a>Aviso de privacidad</a></Link>
+      </div>
     </footer>
   )
 }

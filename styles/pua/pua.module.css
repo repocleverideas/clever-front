@@ -1,0 +1,8 @@
+.background {
+  padding: 4em 0;
+}
+
+.title {
+  color: var(--orange-main);
+  margin-bottom: 2em;
+}
