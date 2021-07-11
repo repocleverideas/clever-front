@@ -21,10 +21,11 @@ export default terminosDeVenta
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`http://localhost:1337/terminos-de-venta`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/terminos-de-venta`)
   const data = await res.json()
 
   return {
-    props: data
+    props: data,
+    revalidate: 1
   }
 }
