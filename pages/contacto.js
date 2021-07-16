@@ -29,8 +29,12 @@ function contacto(data) {
           "value": state.mail
         },
         {
+          "name": "phone",
+          "value": state.tel
+        },
+        {
           "name": "message",
-          "value": state.service
+          "value": state.message
         }
       ],
       "legalConsentOptions":{ // Include this object when GDPR options are enabled
@@ -103,13 +107,35 @@ function contacto(data) {
               />
             </label>
 
-            <label htmlFor="service">
+            <label htmlFor="tel">
+              <span className={styles.label}>Teléfono</span>
+              <input
+                className={styles.input}
+                type="phone"
+                id="tel"
+                name="tel"
+                onChange={handleChange}
+              />
+            </label>
+
+            <label htmlFor="message">
+              <span className={styles.label}>Mensaje</span>
+              <textarea
+                className={styles.input}
+                type="text"
+                id="message"
+                name="message"
+                onChange={handleChange}
+              />
+            </label>
+
+            {/* <label htmlFor="service">
               <span className={styles.label}>Servicio</span>
               <select className={styles.input} name="service" id="service" onChange={handleChange}>
                 <option value="hola">1</option>
                 <option value="mundo">2</option>
               </select>
-            </label>
+            </label> */}
 
             <button className={styles.button} onClick={handleSend}>Enviar</button>
           </form>

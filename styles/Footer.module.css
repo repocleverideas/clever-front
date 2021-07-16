@@ -1,8 +1,19 @@
 .footer {
   background: var(--dark);
   color: var(--white);
-  padding: 3em 0;
+  padding: 3em 0 0;
   position: relative;
+}
+
+.logoLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5em;
+}
+
+.infoLayout {
+  margin-top: 2em;
 }
 
 .imgContainer {
@@ -11,7 +22,7 @@
 }
 
 .img {
-  width: 50%;
+  width: 45%;
 }
 
 .title {
@@ -23,21 +34,48 @@
   align-items: initial;
 }
 
+.legalBackground {
+  font-size: .9em;
+  color: var(--white);
+  background: black;
+  /* width: 50vw; */
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  padding: 1.5em;
+}
+
+.legal {
+  width: 50vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.link:hover {
+  color: var(--orange-main);
+  transition: .4s;
+}
+
 .copy {
   font-size: .8em;
-  color: var(--white);
-  position: absolute;
-  bottom: 0;
-  /* background: red; */
-  width: 100%;
-  display: grid;
-  place-items: center;
-  padding-bottom: .7em;
 }
 
 
 .social {
-  margin: 2em 0;
+  margin: 3.5em auto;
+  width: 55vw;
   display: flex;
   justify-content: space-evenly;
+}
+
+
+@media screen and (min-width: 768px) {
+  .legal {
+    flex-direction: row;
+    gap: 4em;
+  }
 }

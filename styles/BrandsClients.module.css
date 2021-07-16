@@ -1,9 +1,9 @@
 .background {
-  padding: 6em 0;
+  padding: 5em 0 4em;
 }
 
 .text {
-  max-width: 400px;
+  
 }
 
 .logos {
@@ -25,6 +25,22 @@
 
 .carousel{
   text-align: center;
+}
+
+
+.carousel {
+  /* background: var(--white-blue); */
+  height: 250px;
+  /* padding: 4em 0 5em ; */
+
+}
+.logoContainer {
+  /* background: lawngreen; */
+  display: grid;
+  place-items: center;
+}
+.imageLogo {
+  width: 250px;
 }
 
 @media screen and (min-width: 870px) {

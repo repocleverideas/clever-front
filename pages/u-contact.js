@@ -9,7 +9,7 @@ function uContact(data) {
   return (
     <>
       <Header />
-      <section className={styles.background}>
+      {/* <section className={styles.background}>
         <div className={`layout`}>
           <div className={styles.text}>
             <span className={styles.category}>{data.hero.category}</span>
@@ -18,6 +18,22 @@ function uContact(data) {
           </div>
           <div className={styles.imgContainer}>
             <img className={styles.img} src={data.hero.image.image.url} alt="" />
+          </div>
+        </div>
+      </section> */}
+
+      <section className={styles.backgroundVideo}>
+        <div className={styles.videoContainer}>
+          <video className={styles.video} autoPlay muted loop>
+            <source src={data.hero.image.image.url} type='video/mp4' />
+          </video>
+        </div>
+        <div className={styles.colorBackground}></div>
+        <div className={`column ${styles.textVideo}`}>
+          <div className={`column ${styles.textVideoBack}`}>
+            <span className={styles.category}>{data.hero.category}</span>
+            <h1 className={styles.title}>{data.hero.title}</h1>
+            <h3>{data.hero.subtitle}</h3>
           </div>
         </div>
       </section>
