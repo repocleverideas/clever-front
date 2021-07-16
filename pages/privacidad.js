@@ -21,7 +21,7 @@ export default privacidad
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`https://clever-strapi.herokuapp.com/privacidad`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/privacidad?_locale=${locale}`)
   const data = await res.json()
 
   return {

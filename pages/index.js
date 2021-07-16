@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import {
   Header,
   Hero,
-  VideoMain,
+  // VideoMain,
   ServicesCloud,
   Clients,
   BrandsClients,
@@ -29,7 +29,7 @@ export default function Home(data) {
       <Header />
       <Hero data={data.hero} />
       <ServicesCloud data={data.service_item} title={data.services_title} />
-      <VideoMain />
+      {/* <VideoMain /> */}
       <Benefits data={data.benefits} />
       <Clients data={data.clients} />
       <BrandsClients data={data.brands_clients} />
@@ -47,6 +47,7 @@ export async function getStaticProps({ locale }) {
   const data = await res.json()
 
   return {
-    props: data
+    props: data,
+    revalidate: 1
   }
 }

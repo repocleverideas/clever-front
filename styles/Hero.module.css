@@ -35,64 +35,13 @@
 }
 
 .image {
-  width: 300px;
-}
-
-.skewed {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  /* width: 100%; */
-  height: 600px;
-  background: var(--white-blue);
-  z-index: -1;
-  transform: skewY(-3deg);
-  transform-origin: top left;
-}
-.skewedEnd {
-  background: red;
   width: 100%;
-  /* position: absolute;
-  bottom: -12px; */
-  height: 40px;
-  transform: skewY(-2deg);
-  margin-top: 3em;
+  border-radius: 1em;
+  box-shadow: 0px 3px 20px 0px rgba(204, 210, 223, 0.75);
+
 }
 
-.line {
-  height: 27px;
-  position: absolute;
-  transform: skewY(-1deg);
-  transform-origin: top left;
-}
-.left {
-  background: var(--gradient1);
-  width: 40%;
-  bottom: -3px;
-}
-.leftDown {
-  background: var(--gradient2);
-  width: 30%;
-  height: 30px;
-  bottom: -33px;
-  transform-origin: top left;
-}
 
-.right {
-  background: var(--gradient2);
-  width: 40%;
-  right: 0;
-  bottom: -1px;
-}
-.rightDown {
-  background: var(--gradient1);
-  width: 30%;
-  height: 30px;
-  bottom: -30px;
-  right: 0;
-}
 
 @media screen and (min-width: 1000px) {
   .info {
@@ -103,19 +52,16 @@
   }
 
   .text {
-    padding: 0 1.5em;
+    /* padding: 0 1.5em; */
     text-align: left;
   }
   .title {
     font-size: 2.5em;
   }
-  .image {
+  /* .image {
     width: 530px;
-  }
+  } */
 
-  .skewed {
-    height: 600px;
-  }
 }
 
 @keyframes translateLeft {

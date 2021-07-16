@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import styles from '../styles/contacto/contacto.module.css'
 import { Header, Footer } from '../components'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css'
 
 function contacto(data) {
+  const notify = (message) => toast.success(message)
+
   const [state, setState] = useState()
   const handleChange = (e) => {
     setState({
@@ -29,8 +33,12 @@ function contacto(data) {
           "value": state.mail
         },
         {
+          "name": "phone",
+          "value": state.tel
+        },
+        {
           "name": "message",
-          "value": state.service
+          "value": state.message
         }
       ],
       "legalConsentOptions":{ // Include this object when GDPR options are enabled
@@ -56,7 +64,9 @@ function contacto(data) {
 
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4 && xhr.status == 200) {
-        alert(xhr.responseText); // Returns a 200 response if the submission is successful.
+        // alert(xhr.responseText); // Returns a 200 response if the submission is successful.
+        notify('Gracias por enviar tus datos. Recibirás un correo muy pronto')
+
       } else if (xhr.readyState == 4 && xhr.status == 400){
         alert(xhr.responseText); // Returns a 400 error the submission is rejected.
       } else if (xhr.readyState == 4 && xhr.status == 403){
@@ -103,19 +113,42 @@ function contacto(data) {
               />
             </label>
 
-            <label htmlFor="service">
+            <label htmlFor="tel">
+              <span className={styles.label}>Teléfono</span>
+              <input
+                className={styles.input}
+                type="phone"
+                id="tel"
+                name="tel"
+                onChange={handleChange}
+              />
+            </label>
+
+            <label htmlFor="message">
+              <span className={styles.label}>Mensaje</span>
+              <textarea
+                className={styles.input}
+                type="text"
+                id="message"
+                name="message"
+                onChange={handleChange}
+              />
+            </label>
+
+            {/* <label htmlFor="service">
               <span className={styles.label}>Servicio</span>
               <select className={styles.input} name="service" id="service" onChange={handleChange}>
                 <option value="hola">1</option>
                 <option value="mundo">2</option>
               </select>
-            </label>
+            </label> */}
 
             <button className={styles.button} onClick={handleSend}>Enviar</button>
           </form>
         </div>
         {/* <img src="/circle-cloud.svg" alt=""  className={styles.cloud} /> */}
       </section>
+      <ToastContainer />
 
       <Footer />
     </>
@@ -126,10 +159,11 @@ export default contacto
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`https://clever-strapi.herokuapp.com/contacto`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/contacto?_locale=${locale}`)
   const data = await res.json()
 
   return {
-    props: data
+    props: data,
+    revalidate: 1
   }
 }

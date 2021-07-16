@@ -19,22 +19,16 @@
   position: absolute;
   top: 60px;
   left: 0;
-  right: -325px;
+  right: -60px;
   display: none;
-  padding: 1.2em;
+  /* padding: 1.2em; */
+  background: var(--white-blue);
   box-shadow: 0px 3px 20px 3px rgb(166 173 190);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
   z-index: 1;
   transition: .4s;
 }
 
 .dropItem:hover .menuDrop {
-  display: block;
-  background: var(--white-blue);
-}
-.menuDrop:hover {
   display: block;
 }
 
@@ -42,19 +36,31 @@
   border-bottom: 4px solid var(--green-main);
 }
 
-.services {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  color: var(--dark-blue);
-}
-.services > p:hover {
-  color: var(--orange-main);
-  font-weight: 600;
-}
 .serviceSection {
   /* border-bottom: 1px solid red; */
-  padding-bottom: 1em;
+  padding: 1em;
+  position: relative;
 }
+
+.serviceSection:hover {
+  background: var(--blue);
+}
+
+.services {
+  color: var(--dark-blue);
+  position: absolute;
+  top: 0px;
+  left: 180px;
+  width: 170px;
+  background: var(--white-blue);
+  border-left: 2px solid var(--dark-blue);
+  display: none;
+}
+
+.serviceSection:hover .services {
+  display: block;
+}
+
 
 /* .button {
   border: none;
@@ -66,13 +72,14 @@
 } */
 
 .item {
-  padding: 1em .7em 1em 0;
+  /* background: var(--white-blue); */
+  padding: 1em .7em;
   transition: .4s;
-  color: var(--dark-blue);
 }
+
 .item:hover {
   background: var(--blue);
-  border-radius: .7em;
+  color: var(--orange-main);
   padding-left: .5em;
   transition: .4s;
   font-weight: bold;
