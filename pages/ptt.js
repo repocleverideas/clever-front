@@ -68,10 +68,11 @@ export default ptt
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`https://clever-strapi.herokuapp.com/ptt`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/ptt?_locale=${locale}`)
   const data = await res.json()
 
   return {
-    props: data
+    props: data,
+    revalidate: 1
   }
 }

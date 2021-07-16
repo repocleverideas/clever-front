@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import styles from '../styles/contacto/contacto.module.css'
 import { Header, Footer } from '../components'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css'
 
 function contacto(data) {
+  const notify = (message) => toast.success(message)
+
   const [state, setState] = useState()
   const handleChange = (e) => {
     setState({
@@ -60,7 +64,9 @@ function contacto(data) {
 
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4 && xhr.status == 200) {
-        alert(xhr.responseText); // Returns a 200 response if the submission is successful.
+        // alert(xhr.responseText); // Returns a 200 response if the submission is successful.
+        notify('Gracias por enviar tus datos. Recibirás un correo muy pronto')
+
       } else if (xhr.readyState == 4 && xhr.status == 400){
         alert(xhr.responseText); // Returns a 400 error the submission is rejected.
       } else if (xhr.readyState == 4 && xhr.status == 403){
@@ -142,6 +148,7 @@ function contacto(data) {
         </div>
         {/* <img src="/circle-cloud.svg" alt=""  className={styles.cloud} /> */}
       </section>
+      <ToastContainer />
 
       <Footer />
     </>
@@ -152,10 +159,11 @@ export default contacto
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`https://clever-strapi.herokuapp.com/contacto`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/contacto?_locale=${locale}`)
   const data = await res.json()
 
   return {
-    props: data
+    props: data,
+    revalidate: 1
   }
 }
