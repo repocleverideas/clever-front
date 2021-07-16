@@ -79,6 +79,7 @@
 
 .item:hover {
   background: var(--blue);
+  color: var(--orange-main);
   padding-left: .5em;
   transition: .4s;
   font-weight: bold;
