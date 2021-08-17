@@ -30,10 +30,21 @@ function Footer() {
         <div className={styles.infoLayout}>
           <h4 className={styles.title}>{t.contact}</h4>
           <div>
-            <p>Calle Pegaso Ext. 3692 Int. 201 La Calma C.P. 45070 Zapopan</p>
-            <p>info@cleverideas.com.mx</p>
+            <p>🇲🇽 Calle Pegaso Ext. 3692 Int. 201 La Calma C.P. 45070 Zapopan</p>
+            <p>🇺🇸 950 SW 57th Ave. Apt. 330 West Miami, FL CP 33144.</p>
+            <p><img src="/mail.svg" alt="" /> info@cleverideas.com.mx</p>
             <p>🇲🇽 + 52 (33) 5004 2255 <br /> 🇺🇸 +1 (305) 677 6828</p>
           </div>
+        </div>
+
+        <div className={styles.infoLayout}>
+          <h4 className={styles.title}>Links</h4>
+          <div className={styles.links}>
+            <div><a className={styles.link} href=''>WhatsApp</a></div>
+            <div><a className={styles.link} href=''>IA-Tools</a></div>
+            <div><a className={styles.link} href=''>MKD</a></div>
+          </div>
+
         </div>
       </div>
 
