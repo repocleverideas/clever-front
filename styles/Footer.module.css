@@ -12,8 +12,8 @@
   gap: 3.5em;
 }
 
-.infoLayout {
-  margin-top: 2em;
+.infoLayout img {
+  margin-right: .7em;
 }
 
 .imgContainer {
@@ -27,11 +27,19 @@
 
 .title {
   color: var(--green-main);
+  margin-bottom: 1em;
 }
 
 
 .gap {
   align-items: initial;
+  gap: 3em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
 }
 
 .legalBackground {

@@ -20,8 +20,8 @@ function Language() {
       defaultValue={locale}
       className={styles.select}
     >
-      <option value="es">ES 🇪🇸</option>
-      <option value="en">EN 🇺🇸</option>
+      <option value="es">🇲🇽</option>
+      <option value="en">🇺🇸</option>
     </select>
   )
 }
