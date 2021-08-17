@@ -16,7 +16,7 @@ function uContact(data) {
       </Head>
 
       <Header />
-      <section className={styles.background} style={{background: data.hero.color}}>
+      <section className={styles.background} style={{background: data.hero.color && data.hero.color}}>
         <div className={`layout`}>
           <div className={styles.text}>
             <span className={styles.category}>{data.hero.category}</span>
@@ -56,7 +56,7 @@ function uContact(data) {
         </div>
       </section> */}
 
-      <div className={styles.backgroundFeat} style={{ background: data.features.color }}>
+      <div className={styles.backgroundFeat} style={{ background: data.features.color && data.features.color }}>
         <div className='column'>
           <h2 className={styles.titleFeat}>{data.features.title}</h2>
           <p className={styles.descriptionFeat}>{data.features.description}</p>
@@ -73,7 +73,7 @@ function uContact(data) {
         </div>
       </div>
 
-      <section className={styles.background} style={{background: data.complement[0].color}}>
+      <section className={styles.background} style={{background: data.complement[0].color && data.complement[0].color}}>
         <div className={`layout`}>
           <div className={styles.text}>
             {/* <span className={styles.category}>{data.hero.category}</span> */}
@@ -96,7 +96,7 @@ function uContact(data) {
         </div>
       </section>
 
-      <section className={styles.background} style={{background: data.complement[1].color}}>
+      <section className={styles.background} style={{background: data.complement[1].color && data.complement[1].color}}>
         <div className={`layout`}>
           <div className={styles.imgContainer}>
             {
@@ -119,7 +119,7 @@ function uContact(data) {
         </div>
       </section>
 
-      <section className={styles.cardsContainer} style={{background: data.complement[2].color}}>
+      <section className={styles.cardsContainer} style={{background: data.complement[2].color && data.complement[2].color}}>
         <h2 className='column' style={{marginBottom:'1em'}}>{data.complement[2].title}</h2>
         <div className={`layout ${styles.cards}`}>
           {data.complement[2].feature_item.map(item => (
