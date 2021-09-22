@@ -1,22 +1,22 @@
 .background {
   /* min-height: 500px; */
-  background-image: url('/backgroundGreen.jpg');
+  /* background-image: url('/backgroundGreen.jpg'); */
+  /* background-image: url('/fondoCloud.svg'); */
+  /* height: 600px; */
+  padding: 5em 0;
   background-position-x: center;
   background-size: cover;
-  padding: 4.5em 0;
+  /* background-repeat: no-repeat; */
 }
 
 .gap {
-  /* min-width: 800px; */
-  /* margin: 0 auto;
+  width: 85vw;
+  margin: 0 auto;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between; */
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-items: center; */
-  gap: 1.5em;
+  gap: 3em;
 }
 
 .title {
@@ -30,7 +30,7 @@
   height: 200px;
   border: 2px solid var(--green-sec);
   border-radius: 50%;
-  margin: 1em auto;
+  /* margin: 1em auto; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,12 +67,12 @@
   left: -28px;
 }
 .two {
-  top: 6px;
+  top: 75px;
   right: -38px;
 }
 .three {
-  bottom: 6px;
-  left: 0px;
+  bottom: -15px;
+  left: 60px;
 }
 .four {
   bottom: 6px;
@@ -88,7 +88,7 @@
   border-top: 10px solid var(--green-main);
   border-bottom: 10px solid var(--green-main);
   padding: 1.5em 2em;
-  /* width: 85vw; */
+  width: 300px;
   /* margin: 2em auto; */
   transition: 1s;
 }
@@ -123,6 +123,11 @@
 
 @media screen and (min-width: 700px) {
 
+  .gap {
+    flex-direction: row;
+  }
+
+
   .circle {
     width: 120px;
     height: 120px;
@@ -132,7 +137,7 @@
     height: 280px;
   }
   .card {
-    width: 40vw;
+    width: 50%;
   }
   .button {
     font-size: 1em;

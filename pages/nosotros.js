@@ -2,12 +2,60 @@ import React from 'react'
 import { Header, Footer } from '../components'
 import styles from '../styles/nosotros/nosotros.module.css'
 import { Button } from '../components'
+import Hero from '../components/shared/Hero'
+import Info from '../components/shared/Info'
+import { Cta } from '../components'
 
 function nosotros(data) {
   return (
     <>
       <Header />
-      <section className={styles.background} style={{background: data.hero.color}}>
+      <section className={styles.hero} style={{background: data.hero.color}}>
+        <Hero data={data} />
+      </section>
+
+      <section 
+        style={{backgroundImage: `url(${data.info.background?.url})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover', padding:'3rem 0'}}
+      >
+        <Info data={data} />
+      </section>
+
+      <section className={styles.background} style={{background: data.IFT.color}}>
+        <div className={`layout`}>
+          <div className={styles.text}>
+            <span className={styles.category}>{data.IFT.category}</span>
+            <h1 className={styles.title}>{data.IFT.title}</h1>
+            <h3 style={{marginBottom:'30px'}}>{data.IFT.subtitle}</h3>
+            {data.IFT.button && <Button href={data.IFT.link}>{data.IFT.button}</Button>}
+          </div>
+
+
+          <div className={styles.imgContainer}>
+            {
+              data.IFT.isVideo
+                ? <video className={styles.videoSide} autoPlay muted controls loop>
+                    <source src={data.IFT.image.image.url} type='video/mp4' />
+                  </video>
+                : <img className={styles.img} src={data.IFT.image.image.url} alt="" />
+            }
+
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.backgroundQuote} style={{backgroundImage: `url(${data.quote.background?.url})`}}>
+        <div className='layout'>
+          <img src={data.quote.image.url} alt="" className={styles.quoteImage} />
+          <div className={styles.quoteText}>
+            <h2>{data.quote.text}</h2>
+            <p>{data.quote.autor}</p>
+          </div>
+        </div>
+      </section>
+
+      <Cta data={data.cta} />
+
+      {/* <section className={styles.background} style={{background: data.hero.color}}>
         <div className={`layout`}>
           <div className={styles.text}>
             <span className={styles.category}>{data.hero.category}</span>
@@ -28,9 +76,9 @@ function nosotros(data) {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className={styles.cardsContainer} style={{background: data.benefits.color}}>
+      {/* <section className={styles.cardsContainer} style={{background: data.benefits.color}}>
         <h2 className='column' style={{marginBottom:'1em', color:'#C4D600'}}>{data.benefits.title}</h2>
         <div className={`layout ${styles.cards}`}>
           {data.benefits.feature_item.map(item => (
@@ -41,9 +89,9 @@ function nosotros(data) {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
-      <section className={styles.background} style={{background: data.entrepeneur.color}}>
+      {/* <section className={styles.background} style={{background: data.entrepeneur.color}}>
         <div className={`layout`}>
           <div className={styles.text}>
             <span className={styles.category}>{data.entrepeneur.category}</span>
@@ -64,32 +112,9 @@ function nosotros(data) {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className={styles.background} style={{background: data.IFT.color}}>
-        <div className={`layout`}>
-          <div className={styles.text}>
-            <span className={styles.category}>{data.IFT.category}</span>
-            <h1 className={styles.title}>{data.IFT.title}</h1>
-            <h3 style={{marginBottom:'30px'}}>{data.IFT.subtitle}</h3>
-            {data.IFT.button && <a href={data.IFT.link}><Button>{data.IFT.button}</Button></a>}
-          </div>
-
-
-          <div className={styles.imgContainer}>
-            {
-              data.IFT.isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.IFT.image.image.url} type='video/mp4' />
-                  </video>
-                : <img className={styles.img} src={data.IFT.image.image.url} alt="" />
-            }
-
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.cardsContainer} style={{background: data.opinions.color}}>
+      {/* <section className={styles.cardsContainer} style={{background: data.opinions.color}}>
         <h2 className='column' style={{marginBottom:'1em', color:'#C4D600'}}>{data.opinions.title}</h2>
         <div className={`layout ${styles.cards}`}>
           {data.opinions.feature_item.map(item => (
@@ -100,7 +125,7 @@ function nosotros(data) {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </>

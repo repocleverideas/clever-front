@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from '../styles/Button.module.css'
 
-function Button({ children }) {
+function Button({ children, href }) {
   return (
-    <button className={styles.button}>
+    <a href={href} target='_blank' className={styles.button}>
       { children }
-    </button>
+    </a>
   )
 }
 

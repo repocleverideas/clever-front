@@ -1,0 +1,21 @@
+.infoBackground {
+  color: var(--dark);
+  padding: 3em 0;
+}
+
+.titleInfo {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.imgInfo {
+  width: 90%;
+}
+
+.title {
+
+}
+
+.subtitle {
+  margin: 2rem 0 3rem 0;
+}

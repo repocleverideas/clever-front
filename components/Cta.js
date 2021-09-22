@@ -9,13 +9,15 @@ function Cta({ data }) {
       <div className={`layout`}>
         <div className={styles.text}>
           <h2 className={styles.title}>{data.title}</h2>
-          <Link href='/contacto'>
+          <p className={styles.subtitle}>{data.subtitle}</p>
+          {/* <Link href='/contacto'>
             <a><button className={styles.button}>{data.button}</button></a>
-          </Link>
+          </Link> */}
+          <Button href={data.link}>{data.button}</Button>
         </div>
-        <div className={styles.imageContainer}>
+        {/* <div className={styles.imageContainer}>
           <img src={data.image.image.url} alt="" className={styles.image} />
-        </div>
+        </div> */}
       </div>
     </section>
   )

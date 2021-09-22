@@ -1,8 +1,9 @@
 .background {
   /* background: chocolate; */
-  min-height: 640px;
-  display: grid;
-  place-items: center;
+  /* min-height: 640px; */
+  /* display: grid; */
+  /* place-items: center; */
+  padding: 7em 0;
 }
 
 .imgContainer {
@@ -11,20 +12,35 @@
 }
 
 .img {
-  width: 80%;
+  width: 90%;
 }
 
 .text {
   margin-bottom: 2em;
+  color: var(--dark);
 }
 
 .title {
-  color: var(--orange-main);
-  font-size: 3em;
+  color: var(--green-main);
+  font-size: 1.5em;
+}
+.subtitle {
+  font-weight: 200;
+  margin-top: 1em;
+}
+
+
+.backgroundPlatform {
+  padding: 5em 0;
+}
+.titlePlatform {
+  text-align: center;
+  color: var(--dark);
+  margin-bottom: 2em;
 }
 
 .category {
-  color: var(--green-main);
+  /* color: var(--green-main); */
 }
 
 /* .buttonContainer {
@@ -36,30 +52,35 @@
 .backgroundFeat {
   background: var(--white-blue);
   padding: 3em 0;
+  color: var(--dark);
 }
 .titleFeat {
   text-align: center;
   margin-bottom: 1em;
-  color: var(--green-main);
+  /* color: var(--green-main); */
 }
 
 .descriptionFeat {
   text-align: center;
-  margin-bottom: 1.7em;
+  margin-bottom: 4em;
 }
 
 .item {
   display: flex;
   align-items: center;
-  gap: .5em;
+  justify-content: center;
+  gap: 1em;
   margin-bottom: 1em;
   background: var(--blue);
   padding: 1em;
   border-radius: 8px;
+  box-shadow: var(--shadow);
+  width: 100%;
 }
 .gap {
-  gap: 1em;
+  gap: 2em;
   align-items: initial;
+
 }
 
 
@@ -128,4 +149,76 @@
 .cardImg {
   width: 100px;
   margin-bottom: 1em;
+}
+
+
+
+.buttonsBackground {
+  background: var(--gradient1);
+  padding: 4em 0 8em 0;
+  text-align: center;
+}
+
+.buttons {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  place-items: center;
+  margin-top: 4em;
+}
+
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttonItem {
+  background: var(--gray-one);
+  font-weight: bold;
+  padding: .5em 1em;
+  width: 150px;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  display: grid;
+  place-items: center;
+}
+.selected {
+  background: var(--orange-main);
+  color: white;
+}
+.buttonIcon {
+  width: 100px;
+  margin-bottom: 2.3em;
+}
+
+.itemsContainer {
+  background: white;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 2em;
+  border-radius: 1em;
+
+}
+.itemsGrid {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* place-items: left; */
+  padding: 4em 0;
+  gap: 2em;
+
+}
+
+.itemFeature {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.itemFeatureIcon {
+  width: 65px;
 }

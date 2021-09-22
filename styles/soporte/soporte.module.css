@@ -1,32 +1,86 @@
-.text {
-  text-align: center;
-  margin: 3em;
+.layout {
+  display: flex;
 }
+
+.mainContainer {
+  /* height: 100vh; */
+  color: var(--dark);
+  padding: 10em 0;
+  background: var(--gradient1);
+  text-align: center;
+  width: 95%;
+}
+
+.faq {
+  /* background: chocolate; */
+  padding: 10em 2em 10em 3em;
+}
+
+.title {
+  color: var(--white);
+  font-size: 2em;
+  margin: 1em 0;
+}
+
+.subtitle {
+  margin-bottom: 3em;
+}
+
+
+.layoutCards{
+  /* background: chocolate; */
+  /* width: 90%; */
+  padding: 0 .5em;
+  margin: 0 auto;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 
 .card {
   background: var(--white-blue);
   border-radius: 8px;
-  padding: 1em 1.5em;
-}
+  padding: 1.5em;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  width: 175px;
 
-.title {
-  color: var(--orange-main);
-  margin-bottom: .5em;
-}
-
-.subtitle {
-  color: var(--green-main);
-  margin-bottom: 1em;
-}
-
-.layout {
-  gap: 2em;
-  margin-bottom: 3em;
-}
-
-.items {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1em;
-  margin-bottom: 1.5em;
+}
+.cardIcon {
+  width: 100px;
+}
+
+.list {
+  
+}
+.faqTitle {
+  margin-bottom: 2em;
+}
+.listItem {
+  list-style: disc;
+  margin: 1.5em 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .layout {
+    display: block;
+  }
+
+  .mainContainer {
+    width: 100%;
+  }
+
+  .faq {
+    padding: 3em;
+  }
+
+  .img {
+    width: 70%;
+  }
 }
