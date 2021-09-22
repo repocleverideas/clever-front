@@ -61,7 +61,9 @@
 
 .background {
   /* background: chocolate; */
-  min-height: 575px;
+  /* min-height: 575px; */
+  /* margin-top: 0rem; */
+  padding: 8rem 0;
   display: grid;
   place-items: center;
 }
@@ -72,7 +74,7 @@
 }
 
 .img {
-  width: 80%;
+  width: 100%;
 }
 
 .text {
@@ -80,8 +82,9 @@
 }
 
 .title {
-  color: var(--orange-main);
-  font-size: 3em;
+  /* color: var(--orange-main); */
+  font-size: 2em;
+  margin-bottom: 1.5rem;
 }
 
 .category {
@@ -115,4 +118,30 @@
 .cardImg {
   width: 100px;
   margin-bottom: 1em;
+}
+
+
+.hero {
+  padding: 10rem 0 7rem 0;
+}
+
+.backgroundQuote {
+  /* background: var(--gradient1); */
+  /* background-image: ; */
+  background-position: center;
+  background-size: cover;
+  padding: 7rem 0;
+}
+
+.quoteImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.quoteText {
+  color: white;
 }

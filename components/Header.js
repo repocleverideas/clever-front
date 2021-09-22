@@ -26,7 +26,7 @@ function Header() {
       <nav className={styles.nav}>
         <Nav />
         <Language />
-        <Link href='/contacto'><a><Button>Charlemos</Button></a></Link>
+        {/* <Link href='/contacto'><a><Button>Charlemos</Button></a></Link> */}
 
         <div className={`${styles.menu_icon} ${menu && styles.menu_icon_open}`} onClick={handleMenu}>
           <div className={styles.menu_bar}></div>
@@ -69,7 +69,7 @@ function Header() {
           <Link href='/soporte'><li className={styles.listItem}>Soporte</li></Link>
           <Link href='/nosotros'><li className={styles.listItem}>Conócenos</li></Link>
 
-          <button>Ver</button>
+          {/* <button>Ver</button> */}
         </ul>
       </nav>
     </div>

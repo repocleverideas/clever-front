@@ -3,7 +3,7 @@ import styles from '../styles/ServicesCloud.module.css'
 import Link from 'next/link'
 
 
-function ServicesCloud({ data, title }) {
+function ServicesCloud({ data, title, background }) {
 
   const [select, setSelect] = useState(0)
   const changeSelect = (e) => {
@@ -12,17 +12,15 @@ function ServicesCloud({ data, title }) {
   }
 
   return (
-    <section className={styles.background}>
+    <section className={styles.background} style={{backgroundImage: `url(${background?.url})`}}>
       <h3 className={styles.title}>{title}</h3>
 
-      <div className={`layout ${styles.gap}`}>
+      <div className={`${styles.gap}`}>
         <div className={styles.containerCircle}>
           <div className={styles.circle}></div>
           <button onClick={changeSelect} value={0} className={`${styles.button} ${styles.one} ${select == 0 && styles.buttonSelected}`}>{data[0].title}</button>
           <button onClick={changeSelect} value={1} className={`${styles.button} ${styles.two} ${select == 1 && styles.buttonSelected}`}>{data[1].title}</button>
           <button onClick={changeSelect} value={2} className={`${styles.button} ${styles.three} ${select == 2 && styles.buttonSelected}`}>{data[2].title}</button>
-          <button onClick={changeSelect} value={3} className={`${styles.button} ${styles.four} ${select == 3 && styles.buttonSelected}`}>{data[3].title}</button>
-          {/* <button onClick={handleState} value={1}>Contact Center</button> */}
         </div>
 
 

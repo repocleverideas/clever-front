@@ -1,7 +1,8 @@
 .background {
   /* background: linear-gradient(100deg, var(--green-main) 16.67%, #68c649 44%); */
-  background: #68c649;
-  padding: 2em 0 3em;
+  /* background: #68c649; */
+  padding: 6em 0;
+
 }
 .layout {
   display: grid;
@@ -19,13 +20,15 @@
 .text {
   text-align: center;
   min-width: 250px;
+  color: var(--dark-blue);
 }
 
 .title {
-  color: var(--white);
-  font-size: 28px;
+  font-size: 22px;
 }
-
+.subtitle {
+  margin-bottom: 3em;
+}
 .button {
   border: none;
   cursor: pointer;
@@ -44,6 +47,6 @@
 
 @media screen and (min-width: 800px) {
   .title {
-    font-size: 48px;
+    font-size: 32px;
   }
 }

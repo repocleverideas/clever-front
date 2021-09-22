@@ -13,6 +13,8 @@ import HeroServices from './HeroServices'
 import HeroServicesTwo from './HeroServicesTwo'
 import Locations from './soporte/Locations'
 import Footer from './Footer'
+import MainCarousel from './MainCarousel'
+import ClientsCarousel from './ClientsCarousel'
 
 export {
   Header,
@@ -29,5 +31,7 @@ export {
   HeroServices,
   HeroServicesTwo,
   Locations,
-  Footer
+  Footer,
+  MainCarousel,
+  ClientsCarousel
 }

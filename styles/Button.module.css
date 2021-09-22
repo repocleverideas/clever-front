@@ -2,6 +2,7 @@
   border: none;
   cursor: pointer;
   background: var(--green-main);
+  color: var(--white);
   border-radius: 8px;
   font-family: inherit;
   font-weight: bold;
