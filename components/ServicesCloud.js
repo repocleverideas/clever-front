@@ -17,7 +17,9 @@ function ServicesCloud({ data, title, background }) {
 
       <div className={`${styles.gap}`}>
         <div className={styles.containerCircle}>
-          <div className={styles.circle}></div>
+          <div className={styles.circle}>
+            <img src='/cloudWhite.svg' alt="" />
+          </div>
           <button onClick={changeSelect} value={0} className={`${styles.button} ${styles.one} ${select == 0 && styles.buttonSelected}`}>{data[0].title}</button>
           <button onClick={changeSelect} value={1} className={`${styles.button} ${styles.two} ${select == 1 && styles.buttonSelected}`}>{data[1].title}</button>
           <button onClick={changeSelect} value={2} className={`${styles.button} ${styles.three} ${select == 2 && styles.buttonSelected}`}>{data[2].title}</button>
