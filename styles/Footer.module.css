@@ -3,11 +3,11 @@
   color: var(--white);
   padding: 3em 0 0;
   position: relative;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .footerLayout {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -17,10 +17,20 @@
 
 
 .title {
-  color: var(--green-main);
+  /* color: var(--green-main); */
   margin-bottom: 1em;
 }
 
+.itemInfo {
+  margin-top: 1.3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+}
+
+.itemInfo p {
+  margin: 0;
+}
 
 
 
@@ -69,6 +79,7 @@
   /* width: 55vw; */
   display: flex;
   gap: 2em;
+  justify-content: center;
   /* justify-content: space-evenly; */
 }
 
@@ -107,7 +118,7 @@
   }
 
   .directionsLayout {
-    max-width: 350px;
+    max-width: 400px;
   }
 
 }
