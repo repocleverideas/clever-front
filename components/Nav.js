@@ -64,7 +64,7 @@ function Nav() {
           </div>
 
           <div className={styles.serviceSection}>
-            <Link href='/avisos'><a className={styles.serviceTitle}>Agentes</a></Link>
+            <Link href='/agentes'><a className={styles.serviceTitle}>Agentes</a></Link>
 
             {/* <ul className={styles.services}>
               <li className={styles.item}>

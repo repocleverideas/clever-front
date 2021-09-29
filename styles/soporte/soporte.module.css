@@ -11,6 +11,10 @@
   width: 95%;
 }
 
+.img {
+  width: 400px;
+}
+
 .faq {
   /* background: chocolate; */
   padding: 10em 2em 10em 3em;
