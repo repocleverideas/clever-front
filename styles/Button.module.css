@@ -9,7 +9,9 @@
   height: fit-content;
   padding: .5em 1.5em;
   font-size: .9em;
+  transition: .4s;
 }
 .button:hover {
-  background: var(--green-sec);
+  background: var(--orange-main);
+  transition: .4s;
 }

@@ -1,9 +1,5 @@
 .background {
-  /* background: chocolate; */
-  /* min-height: 640px; */
-  /* display: grid; */
-  /* place-items: center; */
-  padding: 7em 0;
+  padding: 6em 0 1rem 0;
 }
 
 .imgContainer {
@@ -12,26 +8,31 @@
 }
 
 .img {
-  width: 90%;
+  width: 95%;
 }
 
 .text {
   margin-bottom: 2em;
   color: var(--dark);
+  font-size: 1.2rem;
 }
 
 .title {
   color: var(--green-main);
-  font-size: 1.5em;
+  font-size: 2em;
 }
 .subtitle {
   font-weight: 200;
   margin-top: 1em;
 }
 
+.titleSecond {
+  color: var(--green-main);
+}
+
 
 .backgroundPlatform {
-  padding: 5em 0;
+  padding: 3.5em 0;
 }
 .titlePlatform {
   text-align: center;
@@ -52,6 +53,7 @@
 .backgroundFeat {
   background: var(--white-blue);
   padding: 3em 0;
+  margin-top: 2rem;
   color: var(--dark);
 }
 .titleFeat {
@@ -155,17 +157,17 @@
 
 .buttonsBackground {
   background: var(--gradient1);
-  padding: 4em 0 8em 0;
+  padding: 4em 0;
   text-align: center;
 }
 
 .buttons {
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   place-items: center;
-  margin-top: 4em;
+  margin-top: 2em;
 }
 
 
@@ -196,21 +198,33 @@
 }
 
 .itemsContainer {
+  /* background: white; */
+  /* max-width: 70%; */
+  /* margin: 0 auto;
+  margin-top: 2em; */
+}
+.itemsContainer {
   background: white;
-  width: 85%;
-  margin: 0 auto;
-  margin-top: 2em;
   border-radius: 1em;
-
+  box-shadow: var(--shadow);
+  max-width: 60%;
+  margin: 2rem auto;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  /* grid-template-columns: repeat(3, 150px); */
+  /* place-items: center; */
+  /* justify-content: center;
+  align-items: center;
+  padding: 2em;
+  gap: 4em; */
 }
 .itemsGrid {
-  width: 85%;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* place-items: left; */
-  padding: 4em 0;
-  gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  padding: 2rem 3rem;
 
 }
 

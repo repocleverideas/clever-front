@@ -56,23 +56,6 @@ function uContact(data) {
         </div>
       </section>
 
-      {/* Video Background */}
-      {/* <section className={styles.backgroundVideo}>
-        <div className={styles.videoContainer}>
-          <video className={styles.video} autoPlay muted loop>
-            <source src={data.hero.image.image.url} type='video/mp4' />
-          </video>
-        </div>
-        <div className={styles.colorBackground}></div>
-        <div className={`column ${styles.textVideo}`}>
-          <div className={`column ${styles.textVideoBack}`}>
-            <span className={styles.category}>{data.hero.category}</span>
-            <h1 className={styles.title}>{data.hero.title}</h1>
-            <h3>{data.hero.subtitle}</h3>
-          </div>
-        </div>
-      </section> */}
-
       <section className={styles.background} style={data.complement[0].color ? {background: data.complement[0].color} : {backgroundImage: `url(${data.complement[0].background?.url})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
       {/* {background: data.complement[0].color} || {backgroundImage: data.complement[0].background.url} */}
         <div className={`layout`}>
@@ -87,9 +70,8 @@ function uContact(data) {
             }
           </div>
 
-          <div className={styles.text}>
-            {/* <span className={styles.category}>{data.hero.category}</span> */}
-            <h1 className={styles.title}>{data.complement[0].title}</h1>
+          <div className={styles.textSecond}>
+            <h1 className={styles.titleSecond}>{data.complement[0].title}</h1>
             <h3 style={{marginBottom:'30px'}} className={styles.subtitle}>{data.complement[0].description}</h3>
           </div>
         </div>
@@ -127,7 +109,6 @@ function uContact(data) {
           </div>
 
           <div className={styles.text} style={{marginLeft:'24px'}}>
-            {/* <span className={styles.category}>{data.hero.category}</span> */}
             <h3 style={{marginBottom:'30px'}} className={styles.subtitle}>{data.complement[1].subtitle}</h3>
             <Button href={data.complement[1].link}>{data.complement[1].button}</Button>
           </div>
@@ -135,20 +116,6 @@ function uContact(data) {
         </div>
       </section>
 
-      {/* <section className={styles.cardsContainer} style={{background: data.complement[2].color && data.complement[2].color}}>
-        <h2 className='column' style={{marginBottom:'1em'}}>{data.complement[2].title}</h2>
-        <div className={`layout ${styles.cards}`}>
-          {data.complement[2].feature_item.map(item => (
-            <div className={styles.card}>
-              <img src={item.icon.url} className={styles.cardImg} alt="" />
-              <h4>{item.feature_title}</h4>
-              <p>{item.feature_description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <CarouselScreens data={data.carousel} /> */}
 
       <section className={styles.buttonsBackground}
         style={{backgroundImage: `url(${data.tabsBackground?.url})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover'}}

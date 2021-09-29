@@ -5,7 +5,7 @@ import styles from '../styles/uContact/uContact.module.css'
 import { Button } from '../components'
 
 
-function avisos(data) {
+function agentes(data) {
   const [state, setState] = useState('one')
                                     // 614a96529498647f3ce259fd
   const handleState = (id) => {
@@ -26,8 +26,8 @@ function avisos(data) {
   return (
     <>
       <Head>
-        <title>Avisos</title>
-        <meta name="description" content="Clever Avisos - Clever IDEAS" />
+        <title>Agentes</title>
+        <meta name="description" content="Agentes - Clever IDEAS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -143,11 +143,11 @@ function avisos(data) {
   )
 }
 
-export default avisos
+export default agentes
 
 export async function getStaticProps({ locale }) {
-  // const res = await fetch(`http://localhost:1337/avisos?_locale=${locale}`)
-  const res = await fetch(`https://clever-strapi.herokuapp.com/avisos?_locale=${locale}`)
+  // const res = await fetch(`http://localhost:1337/agentes?_locale=${locale}`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/agentes?_locale=${locale}`)
   const data = await res.json()
 
   return {

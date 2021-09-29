@@ -8,7 +8,16 @@ function Language() {
 
   const changeLanguage = (e) => {
     const locale = e.target.value
+
+    // if(router.pathname === "/[services]") {
+    //   console.log('here...')
+    // }
     router.push(router.pathname, router.pathname, { locale })
+
+    // router.push({
+    //   pathname: router.pathname,
+    //   query: { services: router.asPath, locale: locale }
+    // })
     // console.log(locale)
   }
 

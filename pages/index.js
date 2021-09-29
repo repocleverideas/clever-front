@@ -36,8 +36,8 @@ export default function Home(data) {
       <Benefits data={data.benefits} />
       {/* <Clients data={data.clients} />
       <BrandsClients data={data.brands_clients} /> */}
-      <ClientsCarousel data={data.clients_carousel} />
       <Cta data={data.cta} />
+      <ClientsCarousel data={data.clients_carousel} />
 
       <Footer />
     </>
