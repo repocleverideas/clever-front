@@ -6,21 +6,8 @@ function chat(data) {
   return (
     <>
       <Header />
-      <section className={styles.background}>
-        <div className={`layout`}>
-          <div className={styles.text}>
-            <span className={styles.category}>{data.hero.category}</span>
-            <h1 className={styles.title}>{data.hero.title}</h1>
-            <h3>{data.hero.subtitle}</h3>
-          </div>
-          <div className={styles.imgContainer}>
-            <img className={styles.img} src={data.hero.image.image.url} alt="" />
-            {/* <img className={styles.img} src='/home-hero.png' alt="" /> */}
-          </div>
-        </div>
-      </section>
 
-      <div className={styles.backgroundInfo}>
+      {/* <div className={styles.backgroundInfo}>
         <p className={`column ${styles.description}`}>{data.info.description}</p>
         <div className={`layout ${styles.gap}`}>
           {
@@ -32,9 +19,9 @@ function chat(data) {
             ))
           }
         </div>
-      </div>
+      </div> */}
 
-      {
+      {/* {
         data.features.map(item => (
           <div className={styles.backgroundFeat} key={item.id}>
             <div className={`layout`}>
@@ -48,7 +35,7 @@ function chat(data) {
             </div>
           </div>
         ))
-      }
+      } */}
 
       <Footer />
     </>
