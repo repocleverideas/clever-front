@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Pagination, Autoplay, Navigation } from 'swiper'
 import 'swiper/swiper-bundle.css'
 import styles from  '../styles/mainCarousel.module.css'
+import Image from 'next/image'
 
 SwiperCore.use([Pagination, Autoplay, Navigation])
 
@@ -21,7 +22,7 @@ function MainCarousel({ data }) {
           data.map(item => (
             <SwiperSlide key={item.id}>
               <div className={styles.slide}>
-                <img className={styles.slideImg} src={item.image.image.url} alt="" />
+                <Image layout='fill' className={styles.slideImg} src={item.image.image.url} alt="" />
                 <div className={styles.slideContent}>
                   <div className={`column`}>
                     <div className={styles.content}>

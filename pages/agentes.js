@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Header, Footer } from '../components'
 import styles from '../styles/uContact/uContact.module.css'
 import { Button } from '../components'
-
+import Image from 'next/image'
 
 function agentes(data) {
   const [state, setState] = useState('one')
@@ -45,10 +45,12 @@ function agentes(data) {
           <div className={styles.imgContainer}>
             {
               data.hero.isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.hero.image.image.url} type='video/mp4' />
-                  </video>
-                : <img className={styles.img} src={data.hero.image.image.url} alt="" />
+                ? <iframe className={styles.videoSide} src={data.hero.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  // <video className={styles.videoSide} autoPlay muted controls loop>
+                  //   <source src={data.hero.image.image.url} type='video/mp4' />
+                  // </video>
+                : <Image width={500} height={400} placeholder="blur" className={styles.img} src={data.hero.image.image.url} alt="" />
+                // : <img className={styles.img} src={data.hero.image.image.url} alt="" />
             }
 
           </div>
@@ -62,10 +64,12 @@ function agentes(data) {
           <div className={styles.imgContainer}>
             {
               data.info.isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.info.image.image.url} type='video/mp4' />
-                  </video>
-                : <img className={styles.img} src={data.info.image.image.url} alt="" />
+                ? <iframe className={styles.videoSide} src={data.info.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> 
+                  //  <video className={styles.videoSide} autoPlay muted controls loop>
+                  //     <source src={data.info.image.image.url} type='video/mp4' />
+                  //   </video>
+                : <Image width={500} height={400} placeholder="blur" className={styles.img} src={data.info.image.image.url} alt="" /> 
+                // <img className={styles.img} src={data.info.image.image.url} alt="" />
             }
           </div>
 
@@ -99,10 +103,12 @@ function agentes(data) {
           <div className={styles.imgContainer}>
             {
               data.info2.isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.info2.image.image.url} type='video/mp4' />
-                  </video>
-                : <img className={styles.img} src={data.info2.image.image.url} alt="" />
+                ? <iframe className={styles.videoSide} src={data.info2.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> 
+                // <video className={styles.videoSide} autoPlay muted controls loop>
+                //     <source src={data.info2.image.image.url} type='video/mp4' />
+                //   </video>
+                : <Image width={500} height={400} placeholder="blur" className={styles.img} src={data.info2.image.image.url} alt="" />
+                // <img className={styles.img} src={data.info2.image.image.url} alt="" />
             }
 
           </div>
@@ -124,7 +130,7 @@ function agentes(data) {
           {
             data.tabs.map(item => (
               <div key={item.id} onClick={() => handleState(item.id_share)} className={styles.buttonContainer}>
-                <img src={item.icon.url} alt="" className={styles.buttonIcon} />
+                <img src={item.icon?.url} alt="" className={styles.buttonIcon} />
                 <div className={`${styles.buttonItem} ${state === item.id_share && styles.selected}`}>{item.title}</div>
               </div>
             ))

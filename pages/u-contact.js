@@ -100,9 +100,10 @@ function uContact(data) {
           <div className={styles.imgContainer}>
             {
               data.complement[1].isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.complement[1].image.image.url} type='video/mp4' />
-                  </video>
+                ? <iframe className={styles.videoSide} src="https://www.youtube-nocookie.com/embed/FIyKv1rTalI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                // <video className={styles.videoSide} autoPlay muted controls loop>
+                //     <source src={data.complement[1].image.image.url} type='video/mp4' />
+                //   </video>
                 : <img className={styles.img} src={data.complement[1].image.image.url} alt="" />
             }
 

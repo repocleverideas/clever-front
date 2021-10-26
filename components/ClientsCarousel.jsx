@@ -22,7 +22,7 @@ function ClientsCarousel({ data }) {
             <SwiperSlide key={item.id}>
               <div className={styles.slide}>
                 {/* <img className={styles.slideImg} src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" /> */}
-                <div className='column'>
+                <div className={styles.columnContent}>
                   <div className={styles.slideContent}>
                     <div className={styles.slideImg}>
                       <img src={item.icon.url} alt="" className={styles.img} />
