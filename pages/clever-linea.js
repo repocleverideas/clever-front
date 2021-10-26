@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import { Header, HeroServices, Footer } from '../components'
 import { Features, Questions } from '../components/linea'
@@ -154,8 +154,8 @@ export default cleverLinea
 
 
 export async function getStaticProps({ locale }) {
-  // const res = await fetch(`http://localhost:1337/clever-linea?_locale=${locale}`)
-  const res = await fetch(`https://clever-strapi.herokuapp.com/clever-linea?_locale=${locale}`)
+  // const res = await fetch(`http://localhost:1337/linea?_locale=${locale}`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/linea?_locale=${locale}`)
 
   const data = await res.json()
 
