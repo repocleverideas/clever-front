@@ -2,12 +2,10 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import { Header, Footer } from '../components'
 import styles from '../styles/uContact/uContact.module.css'
-import CarouselScreens from '../components/ucontact/CarouselScreens'
 import { Button } from '../components'
 
-
-function uContact(data) {
-  const [state, setState] = useState('voice')
+function chat(data) {
+  const [state, setState] = useState('one')
                                     // 614a96529498647f3ce259fd
   const handleState = (id) => {
     setState(id)
@@ -24,11 +22,12 @@ function uContact(data) {
       </div>
     ))
   }
+
   return (
     <>
       <Head>
-        <title>uContact</title>
-        <meta name="description" content="uContact - Clever IDEAS" />
+        <title>Whatsapp Business</title>
+        <meta name="description" content="Whatsapp Business - Clever IDEAS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -46,9 +45,11 @@ function uContact(data) {
           <div className={styles.imgContainer}>
             {
               data.hero.isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.hero.image.image.url} type='video/mp4' />
-                  </video>
+                ? <iframe className={styles.videoSide} src={data.hero.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  // <video className={styles.videoSide} autoPlay muted controls loop>
+                  //   <source src={data.hero.image.image.url} type='video/mp4' />
+                  // </video>
+                // : <Image width={500} height={500} placeholder="blur" className={styles.img} src={data.hero.image.image.url} alt="" />
                 : <img className={styles.img} src={data.hero.image.image.url} alt="" />
             }
 
@@ -56,23 +57,25 @@ function uContact(data) {
         </div>
       </section>
 
-      <section className={styles.background} style={data.complement[0].color ? {background: data.complement[0].color} : {backgroundImage: `url(${data.complement[0].background?.url})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
+      <section className={styles.background} style={data.info.color ? {background: data.info.color} : {backgroundImage: `url(${data.info.background?.url})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
       {/* {background: data.complement[0].color} || {backgroundImage: data.complement[0].background.url} */}
         <div className={`layout`}>
 
           <div className={styles.imgContainer}>
             {
-              data.complement[0].isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.complement[0].image.image.url} type='video/mp4' />
-                  </video>
-                : <img className={styles.img} src={data.complement[0].image.image.url} alt="" />
+              data.info.isVideo
+                ? <iframe className={styles.videoSide} src={data.info.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> 
+                  //  <video className={styles.videoSide} autoPlay muted controls loop>
+                  //     <source src={data.info.image.image.url} type='video/mp4' />
+                  //   </video>
+                // : <Image width={500} height={500} placeholder="blur" className={styles.img} src={data.info.image.image.url} alt="" /> 
+                :  <img className={styles.img} src={data.info.image.image.url} alt="" />
             }
           </div>
 
           <div className={styles.textSecond}>
-            <h1 className={styles.titleSecond}>{data.complement[0].title}</h1>
-            <h3 style={{marginBottom:'30px'}} className={styles.subtitle}>{data.complement[0].description}</h3>
+            <h1 className={styles.titleSecond}>{data.info.title}</h1>
+            <h3 style={{marginBottom:'30px'}} className={styles.subtitle}>{data.info.description}</h3>
           </div>
         </div>
       </section>
@@ -84,7 +87,7 @@ function uContact(data) {
         </div>
         <div className={`layout ${styles.gap}`}>
           {
-            data.features.features.map(item => (
+            data.features.feature_item.map(item => (
               <div key={item.id} className={styles.item}>
                 <img src={item.icon?.url} alt="" width={25} />
                 <span>{item.feature_title}</span>
@@ -94,24 +97,25 @@ function uContact(data) {
         </div>
       </div>
 
-      <section className={styles.backgroundPlatform} style={{background: data.complement[1].color && data.complement[1].color}}>
-        <h1 className={styles.titlePlatform}>{data.complement[1].title}</h1>
+      <section className={styles.backgroundPlatform} style={{background: data.info2.color && data.info2.color}}>
+        <h1 className={styles.titlePlatform}>{data.info2.title}</h1>
         <div className={`layout`}>
           <div className={styles.imgContainer}>
             {
-              data.complement[1].isVideo
-                ? <iframe className={styles.videoSide} src="https://www.youtube-nocookie.com/embed/FIyKv1rTalI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              data.info2.isVideo
+                ? <iframe className={styles.videoSide} src={data.info2.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> 
                 // <video className={styles.videoSide} autoPlay muted controls loop>
-                //     <source src={data.complement[1].image.image.url} type='video/mp4' />
+                //     <source src={data.info2.image.image.url} type='video/mp4' />
                 //   </video>
-                : <img className={styles.img} src={data.complement[1].image.image.url} alt="" />
+                // : <Image width={500} height={500} placeholder="blur" className={styles.img} src={data.info2.image.image.url} alt="" />
+                :  <img className={styles.img} src={data.info2.image.image.url} alt="" />
             }
 
           </div>
 
           <div className={styles.text} style={{marginLeft:'24px'}}>
-            <h3 style={{marginBottom:'30px'}} className={styles.subtitle}>{data.complement[1].subtitle}</h3>
-            <Button href={data.complement[1].link}>{data.complement[1].button}</Button>
+            <h3 style={{marginBottom:'30px'}} className={styles.subtitle}>{data.info2.subtitle}</h3>
+            <Button href={data.info2.link}>{data.info2.button}</Button>
           </div>
 
         </div>
@@ -121,12 +125,12 @@ function uContact(data) {
       <section className={styles.buttonsBackground}
         style={{backgroundImage: `url(${data.tabsBackground?.url})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover'}}
       >
-        <h2 className={styles.buttonsTitle}>{data.tab_title}</h2>
+        <h2>{data.tab_title}</h2>
         <div className={styles.buttons}>
           {
             data.tabs.map(item => (
               <div key={item.id} onClick={() => handleState(item.id_share)} className={styles.buttonContainer}>
-                <img src={item.icon.url} alt="" className={styles.buttonIcon} />
+                <img src={item.icon?.url} alt="" className={styles.buttonIcon} />
                 <div className={`${styles.buttonItem} ${state === item.id_share && styles.selected}`}>{item.title}</div>
               </div>
             ))
@@ -145,11 +149,13 @@ function uContact(data) {
   )
 }
 
-export default uContact
+export default chat
+
 
 export async function getStaticProps({ locale }) {
-  // const res = await fetch(`http://localhost:1337/ucontact?_locale=${locale}`)
-  const res = await fetch(`https://clever-strapi.herokuapp.com/ucontact?_locale=${locale}`)
+  // http://localhost:1337/home?_locale=en
+  // const res = await fetch(`http://localhost:1337/whatsapp?_locale=${locale}`)
+  const res = await fetch(`https://clever-strapi.herokuapp.com/whatsapp?_locale=${locale}`)
   const data = await res.json()
 
   return {

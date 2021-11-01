@@ -108,6 +108,11 @@ function Nav() {
           </div>
 
           <div className={styles.serviceSection}>
+            <Link href='/wab'><a className={styles.serviceTitle}>Whatsapp Business</a></Link>
+
+          </div>
+
+          <div className={styles.serviceSection}>
             <Link href='/conference'><a className={styles.serviceTitle}>Conference</a></Link>
 
           </div>

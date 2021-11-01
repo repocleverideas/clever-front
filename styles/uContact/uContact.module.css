@@ -159,6 +159,10 @@
 .buttonsBackground {
   background: var(--gradient1);
   padding: 4em 0;
+  /* text-align: center; */
+}
+
+.buttonsTitle {
   text-align: center;
 }
 
@@ -208,7 +212,7 @@
   background: white;
   border-radius: 1em;
   box-shadow: var(--shadow);
-  max-width: 60%;
+  max-width: 800px;
   margin: 2rem auto;
   /* display: grid; */
   /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
@@ -221,19 +225,34 @@
 }
 .itemsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-  justify-content: center;
-  align-items: center;
-  gap: 3em;
-  padding: 2rem 3rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+  /* justify-content: center; */
+  /* align-items: center; */
+  column-gap: 1em;
+  row-gap: 2rem;
+  padding: 1rem 1.2rem;
 
 }
 
 .itemFeature {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: .5em;
 }
 .itemFeatureIcon {
-  width: 65px;
+  width: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .itemsContainer {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .itemsGrid {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
 }

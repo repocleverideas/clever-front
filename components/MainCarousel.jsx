@@ -22,7 +22,15 @@ function MainCarousel({ data }) {
           data.map(item => (
             <SwiperSlide key={item.id}>
               <div className={styles.slide}>
-                <Image layout='fill' className={styles.slideImg} src={item.image.image.url} alt="" />
+                <Image
+                  layout='fill'
+                  className={styles.slideImg}
+                  src={item.image.image.url}
+                  placeholder='blur'
+                  blurDataURL={item.image.image.url}
+                  quality={50}
+                  alt="Clever Services"
+                />
                 <div className={styles.slideContent}>
                   <div className={`column`}>
                     <div className={styles.content}>
