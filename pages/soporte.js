@@ -19,7 +19,7 @@ function soporte(data) {
               data.listLink_icon.map(item => (
                 <a href={item.link} key={item.id}>
                   <div className={styles.card}>
-                    <img src={item.icon[0].url} alt="" className={styles.cardIcon} />
+                    <img src={item.icon[0]?.url} alt="" className={styles.cardIcon} />
                     <p>{item.text}</p>
                   </div>
                 </a>

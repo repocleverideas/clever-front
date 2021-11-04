@@ -128,7 +128,7 @@ function uContact(data) {
           {
             data.tabs.map(item => (
               <div key={item.id} onClick={() => handleState(item.id_share)} className={styles.buttonContainer}>
-                <img src={item.icon.url} alt="" className={styles.buttonIcon} />
+                <img src={item.icon?.url} alt="" className={styles.buttonIcon} />
                 <div className={`${styles.buttonItem} ${state === item.id_share && styles.selected}`}>{item.title}</div>
               </div>
             ))

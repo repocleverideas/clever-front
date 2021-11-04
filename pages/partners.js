@@ -71,7 +71,7 @@ function partners(data) {
             {
               data.partnerTypes.tabImage.map(item => (
               <div key={item.id} onClick={() => handleState(item.id_share)} className={styles.buttonContainer}>
-                <img src={item.icon.url} alt="" className={styles.buttonIcon} />
+                <img src={item.icon?.url} alt="" className={styles.buttonIcon} />
                 <h4 className={`${styles.buttonItem} ${state === item.id_share && styles.selected}`}>{item.title}</h4>
               </div>
               ))
