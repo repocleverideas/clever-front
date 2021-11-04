@@ -124,9 +124,9 @@ function evidence(data) {
 
 
       <section className={styles.buttonsBackground}
-        style={{backgroundImage: `url(${data.tabsBackground?.url})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover'}}
+        style={{backgroundImage: `url(${data.tabs_background?.url})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover'}}
       >
-        <h2>{data.tab_title}</h2>
+        <h2 className={styles.buttonsTitle}>{data.tabs_title}</h2>
         <div className={styles.buttons}>
           {
             data.tabs.map(item => (

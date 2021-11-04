@@ -15,7 +15,7 @@ function MainCarousel({ data }) {
         slidesPerView={1}
         pagination={{ clickable: true }}
         navigation
-        autoplay={{ 'delay': 3500 }}
+        autoplay={{ 'delay': 5000 }}
         className={styles.swiper}
       >
         {

@@ -46,9 +46,10 @@ function uContact(data) {
           <div className={styles.imgContainer}>
             {
               data.hero.isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.hero.image.image.url} type='video/mp4' />
-                  </video>
+                ? <iframe className={styles.videoSide} src={data.hero.youtubeLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                // <video className={styles.videoSide} autoPlay muted controls loop>
+                //     <source src={data.hero.image.image.url} type='video/mp4' />
+                //   </video>
                 : <img className={styles.img} src={data.hero.image.image.url} alt="" />
             }
 
@@ -63,9 +64,10 @@ function uContact(data) {
           <div className={styles.imgContainer}>
             {
               data.complement[0].isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.complement[0].image.image.url} type='video/mp4' />
-                  </video>
+                ? <iframe className={styles.videoSide} src={data.complement[0].youtubeLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                // <video className={styles.videoSide} autoPlay muted controls loop>
+                //     <source src={data.complement[0].image.image.url} type='video/mp4' />
+                //   </video>
                 : <img className={styles.img} src={data.complement[0].image.image.url} alt="" />
             }
           </div>
@@ -100,7 +102,7 @@ function uContact(data) {
           <div className={styles.imgContainer}>
             {
               data.complement[1].isVideo
-                ? <iframe className={styles.videoSide} src="https://www.youtube-nocookie.com/embed/FIyKv1rTalI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                ? <iframe className={styles.videoSide} src={data.complement[1].youtubeLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 // <video className={styles.videoSide} autoPlay muted controls loop>
                 //     <source src={data.complement[1].image.image.url} type='video/mp4' />
                 //   </video>

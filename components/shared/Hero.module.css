@@ -5,17 +5,21 @@
 
 .category {
   font-weight: bold;
+  font-size: 18px;
 }
 
 .title {
   /* color: var(--green-main); */
-  font-size: 2.5em;
+  font-size: 3em;
+  color: var(--green-main);
 }
 
 .subtitle {
   font-weight: 200;
   /* margin-top: 1em; */
   margin: 2rem 0 3rem 0;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .imgContainer {

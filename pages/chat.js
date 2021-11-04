@@ -46,9 +46,10 @@ function chat(data) {
           <div className={styles.imgContainer}>
             {
               data.hero.isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.hero.image.image.url} type='video/mp4' />
-                  </video>
+                ? <iframe className={styles.videoSide} src={data.hero.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>                  
+                // <video className={styles.videoSide} autoPlay muted controls loop>
+                //     <source src={data.hero.image.image.url} type='video/mp4' />
+                //   </video>
                 : <img className={styles.img} src={data.hero.image.image.url} alt="" />
             }
 
@@ -63,9 +64,10 @@ function chat(data) {
           <div className={styles.imgContainer}>
             {
               data.info.isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.info.image.image.url} type='video/mp4' />
-                  </video>
+                ? <iframe className={styles.videoSide} src={data.info.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>  
+                // <video className={styles.videoSide} autoPlay muted controls loop>
+                //     <source src={data.info.image.image.url} type='video/mp4' />
+                //   </video>
                 : <img className={styles.img} src={data.info.image.image.url} alt="" />
             }
           </div>
@@ -94,16 +96,17 @@ function chat(data) {
         </div>
       </div>
 
-      <section className={styles.backgroundPlatform} style={{background: data.info2.color && data.info2.color}}>
+      <section className={styles.backgroundPlatform} style={ {backgroundImage: `url(${data.info2.background?.url})`, backgroundPosition:'center', backgroundRepeat:'no-repeat', backgroundSize:'cover'} }>
         <h1 className={styles.titlePlatform}>{data.info2.title}</h1>
         <div className={`layout`}>
           <div className={styles.imgContainer}>
             {
               data.info2.isVideo
-                ? <video className={styles.videoSide} autoPlay muted controls loop>
-                    <source src={data.info2.image.image.url} type='video/mp4' />
-                  </video>
-                : <img className={styles.img} src={data.info2.image.image.url} alt="" />
+                ? <iframe className={styles.videoSide} src={data.info2.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> 
+                // <video className={styles.videoSide} autoPlay muted controls loop>
+                //     <source src={data.info2.image.image.url} type='video/mp4' />
+                //   </video>
+                : <img className={styles.img} src={data.info2.image.image?.url} alt="" />
             }
 
           </div>

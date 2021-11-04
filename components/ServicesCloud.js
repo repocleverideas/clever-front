@@ -32,8 +32,14 @@ function ServicesCloud({ data, title, background }) {
           {
             data[select].product.map(item => (
               <div key={item.id} className={styles.items}>
-                <img src="/check.svg" alt="" className={styles.icon} />
-                <Link href={item.link}>{item.feature_title}</Link>
+                {item.link
+                  ? <>
+                      <img src="/check.svg" alt="" className={styles.icon} />
+                      <Link href={item.link}>{item.feature_title}</Link>
+                    </>
+                  : null
+                }
+                
               </div>
             ))
           }
