@@ -25,9 +25,9 @@ function MainCarousel({ data }) {
                 <Image
                   layout='fill'
                   className={styles.slideImg}
-                  src={item.image.image.url}
+                  src={item.image.image?.url}
                   placeholder='blur'
-                  blurDataURL={item.image.image.url}
+                  blurDataURL={item.image.image?.url}
                   quality={50}
                   alt="Clever Services"
                 />

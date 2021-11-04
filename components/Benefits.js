@@ -31,7 +31,7 @@ function Benefits({ data }) {
           {
             data.benefit_item.map(item => (
               <div key={item.id} className={styles.buttonIcon}>
-                <img src={item.icon.url} alt=""  className={styles.icon}/>
+                <img src={item.icon?.url} alt=""  className={styles.icon}/>
                 <button  value={item.id} onClick={handleState} className={`${styles.button} ${state === item.id && styles.select}`}>{item.slug}</button>
               </div>
             ))
