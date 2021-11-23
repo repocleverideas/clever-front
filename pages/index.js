@@ -31,13 +31,13 @@ export default function Home(data) {
       <Header />
       <MainCarousel data={data.carousel_hero} />
       <ServicesCloud data={data.service_item} title={data.services_title} background={data.backgroundServices} />
-      {/* <Hero data={data.hero} /> */}
+      <Hero data={data.hero} />
       {/* <VideoMain /> */}
       <Benefits data={data.benefits} />
       {/* <Clients data={data.clients} />
       <BrandsClients data={data.brands_clients} /> */}
-      <ClientsCarousel data={data.clients_carousel} />
       <Cta data={data.cta} />
+      <ClientsCarousel data={data.clients_carousel} />
 
       <Footer />
     </>

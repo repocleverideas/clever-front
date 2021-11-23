@@ -40,10 +40,10 @@ function partners(data) {
   const filtered = () => {
     const filter = data.partnerTypes.tabImage.filter(item => item.id_share === state)
     return (
-      <>
+      <div className={styles.wrapperTabs}>
         <p className={styles.textTabs}>{filter[0].text}</p>
         <img src={filter[0].image.url} alt="" className={styles.imgTabs} />
-      </>
+      </div>
     )
   }
   return (

@@ -46,7 +46,7 @@ function uContact(data) {
           <div className={styles.imgContainer}>
             {
               data.hero.isVideo
-                ? <iframe className={styles.videoSide} src={data.hero.youtubeLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                ? <iframe className={styles.videoSide} src={data.hero.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                 // <video className={styles.videoSide} autoPlay muted controls loop>
                 //     <source src={data.hero.image.image.url} type='video/mp4' />
                 //   </video>
@@ -64,7 +64,7 @@ function uContact(data) {
           <div className={styles.imgContainer}>
             {
               data.complement[0].isVideo
-                ? <iframe className={styles.videoSide} src={data.complement[0].youtubeLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                ? <iframe className={styles.videoSide} src={data.complement[0].youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 // <video className={styles.videoSide} autoPlay muted controls loop>
                 //     <source src={data.complement[0].image.image.url} type='video/mp4' />
                 //   </video>
@@ -88,7 +88,7 @@ function uContact(data) {
           {
             data.features.features.map(item => (
               <div key={item.id} className={styles.item}>
-                <img src={item.icon?.url} alt="" width={25} />
+                <img src={item.icon?.url} alt="" width={50} />
                 <span>{item.feature_title}</span>
               </div>
             ))

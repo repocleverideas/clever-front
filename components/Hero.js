@@ -11,9 +11,10 @@ function Hero({ data }) {
         <div className={styles.info}>
           {
             data.isVideo
-              ? <video className={styles.image} autoPlay muted controls width='520' height='300'>
-                  <source src={data.image.image.url} type='video/mp4' />
-                </video>
+              ? <iframe className={styles.videoSide} src={data.youtubeLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> 
+              // <video className={styles.image} autoPlay muted controls width='520' height='300'>
+              //     <source src={data.image.image.url} type='video/mp4' />
+              //   </video>
               : <img className={styles.image} src={data.image.image.url} alt="" />
           }
 

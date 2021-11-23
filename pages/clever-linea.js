@@ -90,7 +90,7 @@ function cleverLinea(data) {
           {
             data.features.feature_item.map(item => (
               <div key={item.id} className={styles.item}>
-                <img src={item.icon?.url} alt="" width={25} />
+                <img src={item.icon?.url} alt="" width={50} />
                 <span>{item.feature_title}</span>
               </div>
             ))
