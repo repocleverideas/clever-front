@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 function blog({ post }) {
-  const date = post.date && new Date(post.date)
+  // const date = post?.date && new Date(post.date)
   const opt = { year: 'numeric', month: 'long', day: 'numeric' }
 
   return (
@@ -27,7 +27,7 @@ function blog({ post }) {
 
         <div className={styles.titleSection}>
           <h1 className={styles.title}>{post.title}</h1>
-          <p>{date.toLocaleDateString('es', opt)}</p>
+          {/* <p>{date.toLocaleDateString('es', opt)}</p> */}
           <p>{post.author && `Autor: ${post.author}`}</p>
         </div>
         
