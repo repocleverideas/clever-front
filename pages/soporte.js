@@ -50,7 +50,7 @@ export default soporte
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
   // const res = await fetch(`http://localhost:1337/soporte?_locale=${locale}`)
-  const res = await fetch(`https://clever-strapi.herokuapp.com/soporte?_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/soporte?_locale=${locale}`)
   const data = await res.json()
 
   return {

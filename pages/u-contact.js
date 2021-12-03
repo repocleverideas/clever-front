@@ -151,7 +151,7 @@ export default uContact
 
 export async function getStaticProps({ locale }) {
   // const res = await fetch(`http://localhost:1337/ucontact?_locale=${locale}`)
-  const res = await fetch(`https://clever-strapi.herokuapp.com/ucontact?_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/ucontact?_locale=${locale}`)
   const data = await res.json()
 
   return {

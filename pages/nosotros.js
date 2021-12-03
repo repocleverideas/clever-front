@@ -137,7 +137,7 @@ export default nosotros
 
 export async function getStaticProps({ locale }) {
   // const res = await fetch(`http://localhost:1337/nosotros?_locale=${locale}`)
-  const res = await fetch(`https://clever-strapi.herokuapp.com/nosotros?_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/nosotros?_locale=${locale}`)
   const data = await res.json()
 
   return {

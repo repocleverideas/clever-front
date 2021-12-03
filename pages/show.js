@@ -161,7 +161,7 @@ export default show
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
   // const res = await fetch(`http://localhost:1337/clever-show?_locale=${locale}`)
-  const res = await fetch(`https://clever-strapi.herokuapp.com/clever-show?_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/clever-show?_locale=${locale}`)
   const data = await res.json()
 
   return {

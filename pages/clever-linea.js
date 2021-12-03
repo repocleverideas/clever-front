@@ -155,7 +155,7 @@ export default cleverLinea
 
 export async function getStaticProps({ locale }) {
   // const res = await fetch(`http://localhost:1337/linea?_locale=${locale}`)
-  const res = await fetch(`https://clever-strapi.herokuapp.com/linea?_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/linea?_locale=${locale}`)
 
   const data = await res.json()
 

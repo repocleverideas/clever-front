@@ -156,7 +156,7 @@ export default conference
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
   // const res = await fetch(`http://localhost:1337/conference-v-2?_locale=${locale}`)
-  const res = await fetch(`https://clever-strapi.herokuapp.com/conference-v-2?_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/conference-v-2?_locale=${locale}`)
   const data = await res.json()
 
   return {

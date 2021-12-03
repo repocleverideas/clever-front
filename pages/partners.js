@@ -98,7 +98,7 @@ export default partners
 
 export async function getStaticProps({ locale }) {
   // http://localhost:1337/home?_locale=en
-  const res = await fetch(`https://clever-strapi.herokuapp.com/partners?_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/partners?_locale=${locale}`)
   // const res = await fetch(`http://localhost:1337/partners?_locale=${locale}`)
   const data = await res.json()
 

@@ -105,6 +105,7 @@ function Nav() {
       <li className={styles.navItem}><Link href='/partners'>Partners</Link></li>
       <li className={styles.navItem}><Link href='/soporte'>{t.support}</Link></li>
       <li className={styles.navItem}><Link href='/nosotros'>{t.us}</Link></li>
+      <li className={styles.navItem}><Link href='/blog'>Blog</Link></li>
       {/* <button className={`${styles.listItem} ${styles.button}`}>Charlemos</button> */}
     </ul>
 

@@ -4,7 +4,7 @@
 
 .navItem {
   margin-right: .7em;
-  padding: 1.2em;
+  padding: 1.2rem .7rem;
 }
 .navItem:hover {
   color: var(--orange-main);

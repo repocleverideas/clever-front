@@ -20,18 +20,28 @@ function Language() {
     // })
     // console.log(locale)
   }
+  const notAvailable = router.route === '/blog/[slug]' || router.route === '/blog'
 
   return (
-    <select
-      name="locale"
-      id="locale"
-      onChange={changeLanguage}
-      defaultValue={locale}
-      className={styles.select}
-    >
-      <option value="es">🇲🇽</option>
-      <option value="en">🇺🇸</option>
-    </select>
+    <>
+    {
+      notAvailable
+      ? null
+      : (
+        <select
+        name="locale"
+        id="locale"
+        onChange={changeLanguage}
+        defaultValue={locale}
+        className={styles.select}
+      >
+        <option value="es">🇲🇽</option>
+        <option value="en">🇺🇸</option>
+      </select>
+      ) 
+    }
+    </>
+    
   )
 }
 

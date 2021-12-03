@@ -153,7 +153,7 @@ export default agentes
 
 export async function getStaticProps({ locale }) {
   // const res = await fetch(`http://localhost:1337/agentes?_locale=${locale}`)
-  const res = await fetch(`https://clever-strapi.herokuapp.com/agentes?_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/agentes?_locale=${locale}`)
   const data = await res.json()
 
   return {
