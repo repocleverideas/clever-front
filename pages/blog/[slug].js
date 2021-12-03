@@ -47,8 +47,8 @@ function blog({ post }) {
 export default blog
 
 export async function getStaticPaths({ locale, locales }) {
-  // const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs`)
-  const res = await fetch(`http://localhost:1337/blogs`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs`)
+  // const res = await fetch(`http://localhost:1337/blogs`)
   const data = await res.json()
 
   // const paths = data.map(item => (
@@ -78,8 +78,8 @@ export async function getStaticPaths({ locale, locales }) {
 export async function getStaticProps({ params, locale }) {
   const { slug } = params
 
-  // const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs?slug=${slug}`)
-  const res = await fetch(`http://localhost:1337/blogs?slug=${slug}&_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs?slug=${slug}&_locale=${locale}`)
+  // const res = await fetch(`http://localhost:1337/blogs?slug=${slug}&_locale=${locale}`)
   const data = await res.json()
 
   if(data.length === 0) {

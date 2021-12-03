@@ -74,11 +74,11 @@ export default index
 
 export async function getStaticProps({ locale }) {
   // const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs`)
-  const res = await fetch(`http://localhost:1337/blogs?_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs?_locale=${locale}`)
   const posts = await res.json()
 
 
-  const bannerRes = await fetch(`http://localhost:1337/blog-home`)
+  const bannerRes = await fetch(`https://cleverideas-web.herokuapp.com/blog-home`)
   const banner = await bannerRes.json()
 
   return {
