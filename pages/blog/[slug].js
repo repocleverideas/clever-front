@@ -4,9 +4,10 @@ import ReactMarkdown from 'react-markdown'
 import styles from './singleBlog.module.css'
 import Link from 'next/link'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 function blog({ post }) {
-  // const date = post?.date && new Date(post.date)
+  const date = post?.date && new Date(post.date)
   const opt = { year: 'numeric', month: 'long', day: 'numeric' }
 
   return (
@@ -27,7 +28,7 @@ function blog({ post }) {
 
         <div className={styles.titleSection}>
           <h1 className={styles.title}>{post.title}</h1>
-          {/* <p>{date.toLocaleDateString('es', opt)}</p> */}
+          <p>{date.toLocaleDateString('es', opt)}</p>
           <p>{post.author && `Autor: ${post.author}`}</p>
         </div>
         
@@ -45,13 +46,28 @@ function blog({ post }) {
 
 export default blog
 
-export async function getStaticPaths() {
-  const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs`)
+export async function getStaticPaths({ locale, locales }) {
+  // const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs`)
+  const res = await fetch(`http://localhost:1337/blogs`)
   const data = await res.json()
 
-  const paths = data.map(item => ({
-    params: { slug: item.slug }
-  }))
+  // const paths = data.map(item => (
+  //   {
+  //     params: { slug: item.slug }, locale: 'es'
+  //   }
+  // ))
+  let paths = []
+
+  data.forEach(block => {
+    for (const locale of locales) {
+      paths.push({
+        params: {
+          slug: block.slug
+        },
+        locale
+      })
+    }
+  })
 
   return {
     paths,
@@ -59,11 +75,20 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
   const { slug } = params
 
-  const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs?slug=${slug}`)
+  // const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs?slug=${slug}`)
+  const res = await fetch(`http://localhost:1337/blogs?slug=${slug}&_locale=${locale}`)
   const data = await res.json()
+
+  if(data.length === 0) {
+    return {
+      notFound: true
+    }
+  }
+
+  // post.filter(item => item.locale === locale)
 
 
   const post = data[0]

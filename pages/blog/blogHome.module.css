@@ -41,7 +41,7 @@
 }
 
 .bannerImage {
-  background: red;
+  background: var(--gradient1);
   height: 550px;
   width: 85%;
 }

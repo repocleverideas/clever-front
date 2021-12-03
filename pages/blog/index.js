@@ -4,7 +4,7 @@ import { Header } from '../../components'
 import styles from './blogHome.module.css'
 import Head from 'next/head'
 
-function index({ posts }) {
+function index({ posts, banner }) {
   const morePost = posts && posts.length > 7 && posts.slice(6)
 
   return (
@@ -41,8 +41,12 @@ function index({ posts }) {
         </div>
 
         <div className={styles.banner}>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            <div className={styles.bannerImage}></div>
+          <a href={banner.link} target="_blank" rel="noopener noreferrer">
+            <div className={styles.bannerImage}>
+              {/* {
+                banner.banner?.url ? banner.banner.url : <div style={{background:'red', width:'250px', height:'550'}} />
+              } */}
+            </div>
           </a>
           {
             posts && posts.length > 6
@@ -68,11 +72,16 @@ function index({ posts }) {
 
 export default index
 
-export async function getStaticProps() {
-  const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs`)
+export async function getStaticProps({ locale }) {
+  // const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs`)
+  const res = await fetch(`http://localhost:1337/blogs?_locale=${locale}`)
   const posts = await res.json()
 
+
+  const bannerRes = await fetch(`http://localhost:1337/blog-home`)
+  const banner = await bannerRes.json()
+
   return {
-    props: { posts }
+    props: { posts, banner }
   }
 }
