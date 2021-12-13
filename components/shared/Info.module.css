@@ -19,3 +19,21 @@
 .subtitle {
   margin: 2rem 0 3rem 0;
 }
+
+.button {
+  border: none;
+  cursor: pointer;
+  background: var(--green-main);
+  color: var(--white);
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: bold;
+  height: fit-content;
+  padding: .5em 1.5em;
+  font-size: .9em;
+  transition: .4s;
+}
+.button:hover {
+  background: var(--orange-main);
+  transition: .4s;
+}

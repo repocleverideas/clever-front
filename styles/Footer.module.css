@@ -4,10 +4,11 @@
   padding: 3em 0 0;
   position: relative;
   font-size: 14px;
+  cursor:default;
 }
 
 .footerLayout {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -26,12 +27,20 @@
   display: flex;
   align-items: flex-start;
   gap: .5rem;
+  line-height: 1.6rem;
 }
 
 .itemInfo p {
   margin: 0;
 }
 
+
+.directions {
+
+}
+.directions h4 {
+  margin-top: 2.5rem;
+}
 
 
 .links {
@@ -53,6 +62,10 @@
   justify-content: space-between;
   align-items: center;
 }
+.legalBackground span {
+  width: 100px;
+}
+
 
 .legal {
   /* width: 50vw; */
@@ -103,22 +116,36 @@
     flex-direction: row;
     gap: 4em;
   }
+
+  .legalBackground span {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 900px) {
   .footerLayout {
     display: flex;
     justify-content: space-between;
-
+    width: 1000px;
   }
 
   .directions {
     display: flex;
-    gap: 3em;
+    gap: 2.5em;
+  }
+
+  .directions h4 {
+    margin-top: 0;
   }
 
   .directionsLayout {
-    max-width: 400px;
+    max-width: 450px;
+  }
+
+  .legalBackground {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 1.5em 0;
   }
 
 }

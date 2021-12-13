@@ -42,8 +42,13 @@
 
 .bannerImage {
   background: var(--gradient1);
-  height: 550px;
+  /* height: 550px; */
   width: 85%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.bannerImage img {
+  width: 100%;
 }
 
 .bannerMore {
@@ -68,10 +73,6 @@
   gap: 1.5rem;
 }
 
-.grid article {
-  /* border: 1px solid red; */
-  /* height: 250px; */
-}
 
 .grid article:first-child {
   /* border: 1px solid forestgreen; */
@@ -125,8 +126,6 @@
   }
   
   .bannerImage {
-    background: red;
-    height: 550px;
     width: 90%;
   }
 }

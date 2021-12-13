@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '..'
 import styles from './Info.module.css'
+import Link from 'next/link'
 
 function Info({ data }) {
   return (
@@ -14,7 +15,8 @@ function Info({ data }) {
         <div>
           <h2>{data.info.title}</h2>
           <p className={styles.subtitle}>{data.info.description}</p>
-          <Button href={data.info.link}>{data.info.button}</Button>
+          {/* <Button href='/ruta'>{data.info.button}</Button> */}
+          <Link href='/ruta'><a className={styles.button}>{data.info.button}</a></Link>
         </div>
       </div>
 

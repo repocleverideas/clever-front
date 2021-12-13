@@ -55,7 +55,7 @@
   height: 280px;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 900px) {
   .info {
     flex-direction: row;
     max-width: 1000px;
@@ -74,6 +74,13 @@
     width: 530px;
   } */
 
+}
+
+@media screen and (max-width: 1024px) {
+  .videoSide {
+    width: 155%;
+    height: 207px;
+  }
 }
 
 @media screen and (max-width: 888px) {

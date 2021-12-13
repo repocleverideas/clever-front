@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Header } from '../../components'
+import { Footer, Header } from '../../components'
 import styles from './blogHome.module.css'
 import Head from 'next/head'
 
@@ -43,9 +43,8 @@ function index({ posts, banner }) {
         <div className={styles.banner}>
           <a href={banner.link} target="_blank" rel="noopener noreferrer">
             <div className={styles.bannerImage}>
-              {/* {
-                banner.banner?.url ? banner.banner.url : <div style={{background:'red', width:'250px', height:'550'}} />
-              } */}
+              {/* <img src="/bannerBlogTest.jpeg" alt="" /> */}
+              <img src={banner.banner.url} alt="" />
             </div>
           </a>
           {
@@ -55,7 +54,7 @@ function index({ posts, banner }) {
                 <h4>Más entradas</h4>
                 <ul>
                   {morePost.map((item, index) => (
-                    <li key={index}>{item.title}</li>
+                    <Link href={`/blog/${item.slug}`}><li key={index}>{item.title}</li></Link>
                   ))}
                 </ul>
               </div> 
@@ -65,6 +64,8 @@ function index({ posts, banner }) {
         </div>
 
       </section>
+
+      <Footer />
 
     </div>
   )
