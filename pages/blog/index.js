@@ -83,6 +83,7 @@ export async function getStaticProps({ locale }) {
   const banner = await bannerRes.json()
 
   return {
-    props: { posts, banner }
+    props: { posts, banner },
+    revalidate: 1
   }
 }

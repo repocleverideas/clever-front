@@ -7,6 +7,14 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 function blog({ post }) {
+  const router = useRouter()
+  const { isFallback } = router
+
+  if(isFallback) {
+    return <div style={{height:'100vh', display:'grid', placeItems:'center'}}><div>Loading...</div></div>
+  }
+
+
   const date = post?.date && new Date(post.date)
   const opt = { year: 'numeric', month: 'long', day: 'numeric' }
 

@@ -52,8 +52,8 @@ function Footer() {
             <div className={styles.links}>
               <p><a className={styles.link} href={t.portabilityLink} target='_blank'>{t.portability}</a></p>
               {/* <p><a className={styles.link} href=''>Solicitud Soporte</a></p> */}
-              <p><a className={styles.link} href={t.wabLink}  target='_blank'>{t.wab}</a></p>
-              <p><Link className={styles.link} href='/ruta'>{t.infographic}</Link></p>
+              {/* <p><a className={styles.link} href={t.wabLink} target='_blank'>{t.wab}</a></p> */}
+              <Link className={styles.link} href='/ruta'><a className={styles.link}>{t.infographic}</a></Link>
             </div>
           </div>
 
@@ -100,7 +100,7 @@ function Footer() {
           </div>
           <div className={styles.social}>
             <a href="https://facebook.com/cleverideasMX" target="_blank"><img src="/facebook.svg" width={40} alt="" /></a>
-            <a href="" target="_blank"><img src="/whatsapp.svg" width={40} alt="" /></a>
+            <a href={t.wabLink} target="_blank"><img src="/whatsapp.svg" width={40} alt="" /></a>
             <a href="https://www.linkedin.com/company/clever.ideas./" target="_blank"><img src="/linkedin.svg" width={40} alt="" /></a>
             <a href="https://youtube.com/channel/UCAtYcWPgywnrY74ujukxlqg" target="_blank"><img src="/youtube.svg" width={40} alt="" /></a>
             <a href="https://twitter.com/CleverIdeas3" target="_blank"><img src="/twitter.svg" width={40} alt="" /></a>
