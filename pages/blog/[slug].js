@@ -36,7 +36,7 @@ function blog({ post }) {
 
         <div className={styles.titleSection}>
           <h1 className={styles.title}>{post.title}</h1>
-          <p>{date.toLocaleDateString('es', opt)}</p>
+          <p>{post?.date && date.toLocaleDateString('es', opt)}</p>
           <p>{post.author && `Autor: ${post.author}`}</p>
         </div>
         
