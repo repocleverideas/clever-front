@@ -80,7 +80,7 @@ function Footer() {
                 <h4>USA</h4>
                 <div className={styles.itemInfo}>
                   <img src="/5.svg" alt="" width={20} />
-                  <p>950 SW 57th Ave. Apt. 330 West Miami, FL <br /> C.P. 33144.</p>
+                  <p>950 SW 57th Ave. Suite 330 West Miami, FL <br /> C.P. 33144.</p>
                 </div>
                 <div className={styles.itemInfo}>
                   <img src="/6.svg" alt="" width={20} />
