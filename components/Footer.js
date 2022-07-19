@@ -42,6 +42,8 @@ function Footer() {
 
   const t = locale === 'es' ? es : en
 
+  const year = new Date().getFullYear()
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerLayout}>
@@ -64,14 +66,14 @@ function Footer() {
                 <h4>México</h4>
                 <div className={styles.itemInfo}>
                   <img src="/5.svg" alt="" width={20} />
-                  <p> Calle Pegaso Ext. 3692 Int. 201 La Calma <br /> C.P. 45070 Zapopan, Jalisco</p>
+                  <p>Calle Pegaso #3692 Int. 201 Colonia La Calma <br /> C.P. 45070 <br /> Zapopan, Jalisco, México</p>
                 </div>
                 <div className={styles.itemInfo}>
                   <img src="/6.svg" alt="" width={20} />
                   <p>+ 52 (33) 5004 2255</p>
                 </div>
                 <div className={styles.itemInfo} style={{alignItems:'center'}}>
-                  <img src="/mail.svg" alt="" alt="" width={15} />
+                  <img src="/mail.svg" alt="" width={15} />
                   <p>info@cleverideas.com.mx</p>
                 </div>
 
@@ -112,7 +114,7 @@ function Footer() {
 
 
       <div className={styles.legalBackground}>
-        <span>Copyright 2021 - Clever IDEAS ©</span>
+        <span>Copyright {year} - Clever IDEAS ©</span>
         <div className={styles.legal}>
           <Link href='/pua'><a className={styles.link}>PUA</a></Link>
           <Link href='/terminos-de-venta'><a className={styles.link}>{t.terms}</a></Link>
