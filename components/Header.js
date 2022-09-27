@@ -11,7 +11,8 @@ const es = {
   us: 'Nosotros',
   notices: 'Avisos',
   agents: 'Agentes',
-  line: 'Línea'
+  line: 'Línea',
+  education: 'Educación'
 }
 const en = {
   enterprise: 'Enterprise',
@@ -19,7 +20,8 @@ const en = {
   us: 'Us',
   notices: 'Notices',
   agents: 'Agents',
-  line: 'Line'
+  line: 'Line',
+  education: 'Education'
 }
 
 function Header() {
@@ -58,6 +60,7 @@ function Header() {
   ]
 
   const menuSingleItems = [
+    { navTitle: t.education, link: '/educacion' },
     { navTitle: 'Partners', link: '/partners' },
     { navTitle: t.support, link: '/soporte' },
     { navTitle: t.us, link: '/nosotros' },
