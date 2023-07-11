@@ -26,11 +26,11 @@ export default function Home(data) {
         <title>Clever IDEAS</title>
         <meta name="description" content="Clever Ideas 2021" />
         <link rel="icon" href="/favicon.ico" />
-        <script async src="https://clever.ucontactcloud.com/webchatclient/integrawebchat.js"></script>
+        <script async src="https://clevercc.ucontactcloud.com/webchatclient/integrawebchat.js"></script>
         <script async>
           {
             `initwebchat({
-              ip: "clever.ucontactcloud.com",
+              ip: "clevercc.ucontactcloud.com",
               campaign: "CleverIdeas"
             })`
           }
