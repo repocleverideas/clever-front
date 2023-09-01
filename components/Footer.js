@@ -5,12 +5,14 @@ import styles from '../styles/Footer.module.css'
 
 const es = {
   contact: 'Contáctanos',
-  interest: 'Links de interés',
+  interest: 'Links de Interés',
   portability: 'Portabilidad Numérica',
-  portabilityLink: 'https://app.hubspot.com/forms/8906711/a6893825-477d-491d-a4a1-09520b6ef6e4/performance',
+  portabilityLink: 'https://share.hsforms.com/1pok4JUd9SR2koQlSC2725A5awgn',
+  transparency: 'Lineamientos de Transparencia',
+  security: 'Colaboración en Seguridad y Justicia',
   wab: 'Whatsapp',
   wabLink: 'https://api.whatsapp.com/send?text=Hola,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n.%20&phone=523350042255',
-  infographic: 'Ruta de emprendimiento',
+  infographic: 'Ruta de Emprendimiento',
   moreInfo: '¿Deseas más información?',
   buttonA: 'Hablemos',
   buttonALink: 'https://blog.cleverideas.com.mx/soluciones-en-la-nube',
@@ -23,7 +25,9 @@ const en = {
   contact: 'Contact us',
   interest: 'Interest Links',
   portability: 'Number Portability',
-  portabilityLink: 'https://share.hsforms.com/14jZdVbx5QRO-zIHTb6tgIQ5awgn',
+  portabilityLink: 'https://share.hsforms.com/1pok4JUd9SR2koQlSC2725A5awgn',
+  transparency: 'Transparency Guidelines',
+  security: 'Security and Justice Collaboration',
   wab: 'Whatsapp',
   wabLink: 'https://api.whatsapp.com/send?text=Hi,%20I%20would%20like%20to%20receive%20information.%20&phone=13056776828',
   infographic: 'Enterpreuniship route',
@@ -53,8 +57,8 @@ function Footer() {
             <h4 className={styles.title}>{t.interest}</h4>
             <div className={styles.links}>
               <p><a className={styles.link} href={t.portabilityLink} target='_blank'>{t.portability}</a></p>
-              {/* <p><a className={styles.link} href=''>Solicitud Soporte</a></p> */}
-              {/* <p><a className={styles.link} href={t.wabLink} target='_blank'>{t.wab}</a></p> */}
+              <p><a className={styles.link} href='https://hubs.ly/Q020LCq20' target='_blank'>{t.transparency}</a></p>
+              <p><a className={styles.link} href='https://hubs.ly/Q020QKp_0' target='_blank'>{t.security}</a></p>
               <Link className={styles.link} href='/ruta'><a className={styles.link}>{t.infographic}</a></Link>
             </div>
           </div>
