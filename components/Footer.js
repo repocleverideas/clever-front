@@ -10,6 +10,8 @@ const es = {
   portabilityLink: 'https://share.hsforms.com/1pok4JUd9SR2koQlSC2725A5awgn',
   transparency: 'Lineamientos de Transparencia',
   security: 'Colaboración en Seguridad y Justicia',
+  rights: 'Carta de Derechos Mínimos de los Usuarios',
+  practices: 'Código de Prácticas Comerciales',
   wab: 'Whatsapp',
   wabLink: 'https://api.whatsapp.com/send?text=Hola,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n.%20&phone=523350042255',
   infographic: 'Ruta de Emprendimiento',
@@ -28,6 +30,8 @@ const en = {
   portabilityLink: 'https://share.hsforms.com/1pok4JUd9SR2koQlSC2725A5awgn',
   transparency: 'Transparency Guidelines',
   security: 'Security and Justice Collaboration',
+  rights: 'Minimum Rights of Users Charter',
+  practices: 'Commercial Practices Code',
   wab: 'Whatsapp',
   wabLink: 'https://api.whatsapp.com/send?text=Hi,%20I%20would%20like%20to%20receive%20information.%20&phone=13056776828',
   infographic: 'Enterpreuniship route',
@@ -57,9 +61,11 @@ function Footer() {
             <h4 className={styles.title}>{t.interest}</h4>
             <div className={styles.links}>
               <p><a className={styles.link} href={t.portabilityLink} target='_blank'>{t.portability}</a></p>
+              <Link className={styles.link} href='/ruta'><a className={styles.link}>{t.infographic}</a></Link>
               <p><a className={styles.link} href='https://hubs.ly/Q020LCq20' target='_blank'>{t.transparency}</a></p>
               <p><a className={styles.link} href='https://hubs.ly/Q020QKp_0' target='_blank'>{t.security}</a></p>
-              <Link className={styles.link} href='/ruta'><a className={styles.link}>{t.infographic}</a></Link>
+              <p><a className={styles.link} href='https://hubs.ly/Q020YG-s0' target='_blank'>{t.rights}</a></p>
+              <p><a className={styles.link} href='https://hubs.ly/Q020YFcy0' target='_blank'>{t.practices}</a></p>
             </div>
           </div>
 
