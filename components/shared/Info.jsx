@@ -16,7 +16,7 @@ function Info({ data }) {
           <h2>{data.info.title}</h2>
           <p className={styles.subtitle}>{data.info.description}</p>
           {/* <Button href='/ruta'>{data.info.button}</Button> */}
-          <Link href='/ruta'><a className={styles.button}>{data.info.button}</a></Link>
+          <Link href='/ruta' className={styles.button}>{data.info.button}</Link>
         </div>
       </div>
 

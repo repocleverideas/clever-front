@@ -46,7 +46,7 @@ function index({ posts, banner }) {
                   </div>
                   <h2>{item.title}</h2>
                   <p>{item.resume}</p>
-                  <Link href={`/blog/${item.slug}`}>{t.read}</Link>
+                  <span href={`/blog/${item.slug}`} className={styles.link}>{t.read}</span>
                 </article>
               </Link>
             ))}
@@ -68,7 +68,7 @@ function index({ posts, banner }) {
                 <h4>Más entradas</h4>
                 <ul>
                   {morePost.map((item, index) => (
-                    <li key={index}><Link href={`/blog/${item.slug}`}><a key={index}>{item.title}</a></Link></li>
+                    <li key={index}><Link href={`/blog/${item.slug}`}>{item.title}</Link></li>
                   ))}
                 </ul>
               </div> 
@@ -89,10 +89,10 @@ export default index
 
 export async function getStaticProps({ locale }) {
   // const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs`)
-  const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs?_locale=${locale}`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs?_locale=${locale}&_sort=date:DESC&_limit=20`)
   const posts = await res.json()
 
-  posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+  // posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
 
 
   const bannerRes = await fetch(`https://cleverideas-web.herokuapp.com/blog-home`)

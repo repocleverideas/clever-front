@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 
 import {
   Header,
@@ -15,8 +13,7 @@ import {
   MainCarousel,
   ClientsCarousel
 } from '../components'
-
-{/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
+import Script from 'next/script'
 
 
 export default function Home(data) {
@@ -35,27 +32,25 @@ export default function Home(data) {
             })`
           }
         </script>
-        {/* <!-- Google tag (gtag.js) --> */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z95CFRLS0N"></script>
-        <script>
-          {
-            `window.dataLayer = window.dataLayer || [];
+      </Head>
+
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-Z95CFRLS0N" strategy='afterInteractive'
+        onLoad={() => {
+          `window.dataLayer = window.dataLayer || [];
              function gtag(){dataLayer.push(arguments);}
              gtag('js', new Date());
   
              gtag('config', 'G-Z95CFRLS0N');`
-          }
-        </script>
-      </Head>
+        }}
+      />
 
       <Header />
       <MainCarousel data={data.carousel_hero} />
       <ServicesCloud data={data.service_item} title={data.services_title} background={data.backgroundServices} />
       <Hero data={data.hero} />
-      {/* <VideoMain /> */}
+      
       <Benefits data={data.benefits} />
-      {/* <Clients data={data.clients} />
-      <BrandsClients data={data.brands_clients} /> */}
+      
       <ClientsCarousel data={data.clients_carousel} />
       <Cta data={data.cta} />
 

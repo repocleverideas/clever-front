@@ -10,7 +10,7 @@ function Nav({ menuDropItems, menuSingleItems }) {
         <div className={styles.menuDrop}>
           { section.links.map((item, index) => (
             <div className={styles.serviceSection} key={`MenuItem-${index}`}>
-              <Link href={item.link}><a className={styles.serviceTitle}>{item.navTitle}</a></Link>
+              <Link href={item.link} className={styles.serviceTitle}>{item.navTitle}</Link>
             </div>
           )) }
 

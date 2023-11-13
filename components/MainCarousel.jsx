@@ -23,7 +23,9 @@ function MainCarousel({ data }) {
             <SwiperSlide key={item.id}>
               <div className={styles.slide}>
                 <Image
-                  layout='fill'
+                  // layout='fill'
+                  height={600}
+                  width={600}
                   className={styles.slideImg}
                   src={item.image.image?.url}
                   placeholder='blur'

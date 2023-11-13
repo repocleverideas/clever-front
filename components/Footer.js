@@ -61,7 +61,7 @@ function Footer() {
             <h4 className={styles.title}>{t.interest}</h4>
             <div className={styles.links}>
               <p><a className={styles.link} href={t.portabilityLink} target='_blank'>{t.portability}</a></p>
-              <Link className={styles.link} href='/ruta'><a className={styles.link}>{t.infographic}</a></Link>
+              <Link className={styles.link} href='/ruta'>{t.infographic}</Link>
               <p><a className={styles.link} href='https://hubs.ly/Q020LCq20' target='_blank'>{t.transparency}</a></p>
               <p><a className={styles.link} href='https://hubs.ly/Q020QKp_0' target='_blank'>{t.security}</a></p>
               <p><a className={styles.link} href='https://hubs.ly/Q020YG-s0' target='_blank'>{t.rights}</a></p>
@@ -126,9 +126,9 @@ function Footer() {
       <div className={styles.legalBackground}>
         <span>Copyright {year} - Clever IDEAS ©</span>
         <div className={styles.legal}>
-          <Link href='/pua'><a className={styles.link}>PUA</a></Link>
-          <Link href='/terminos-de-venta'><a className={styles.link}>{t.terms}</a></Link>
-          <Link href='/privacidad'><a className={styles.link}>{t.privacity}</a></Link>
+          <Link href='/pua' className={styles.link}>PUA</Link>
+          <Link href='/terminos-de-venta' className={styles.link}>{t.terms}</Link>
+          <Link href='/privacidad' className={styles.link}>{t.privacity}</Link>
         </div>
       </div>
     </footer>
