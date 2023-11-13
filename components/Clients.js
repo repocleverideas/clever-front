@@ -1,20 +1,10 @@
-import React, { useRef } from 'react'
-import { useIntersection } from 'react-use'
+import React from 'react'
 import styles from '../styles/Clients.module.css'
 
 function Clients({ data }) {
-  const intersectionRef = useRef(null)
-  const intersection = useIntersection(intersectionRef, {
-    root: null,
-    rootMargin: '10px',
-    threshold: 1
-  })
-
-  const animation = intersection && intersection.isIntersecting > .5 && styles.animation
-
   return (
     <section className={styles.container}>
-      <div className={`${styles.content}`} ref={intersectionRef}>
+      <div className={`${styles.content}`}>
         <h3 className={`column ${styles.title}`}>{data.tile}</h3>
         <div className={`layout ${styles.gap}`}>
           {

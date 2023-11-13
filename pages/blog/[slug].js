@@ -55,7 +55,7 @@ function blog({ post }) {
 export default blog
 
 export async function getStaticPaths({ locale, locales }) {
-  const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs`)
+  const res = await fetch(`https://cleverideas-web.herokuapp.com/blogs?_limit=20`)
   // const res = await fetch(`http://localhost:1337/blogs`)
   const data = await res.json()
 

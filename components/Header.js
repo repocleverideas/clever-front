@@ -88,7 +88,7 @@ function Header() {
       
       <div className={styles.logoContainer}>
         <Link href='/'>
-          <a><Image src='/logo-black-h.png' alt='Clever Logo' layout='fill' priority /></a>
+          <Image src='/logo-black-h.png' alt='Clever Logo' width={90} height={30} priority />
         </Link>
       </div>
 
@@ -119,7 +119,7 @@ function Header() {
                   `}
                 >
                   <li className={styles.subItem}>
-                    <Link href={item.link}><a className={styles.link}>{item.navTitle}</a></Link>
+                    <Link href={item.link} className={styles.link}>{item.navTitle}</Link>
                   </li>
                 </ul>
 
