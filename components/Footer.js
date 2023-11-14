@@ -12,6 +12,7 @@ const es = {
   security: 'Colaboración en Seguridad y Justicia',
   rights: 'Carta de Derechos Mínimos de los Usuarios',
   practices: 'Código de Prácticas Comerciales',
+  profeco: 'Oficio Aprobatorio PROFECO',
   wab: 'Whatsapp',
   wabLink: 'https://api.whatsapp.com/send?text=Hola,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n.%20&phone=523350042255',
   infographic: 'Ruta de Emprendimiento',
@@ -32,6 +33,7 @@ const en = {
   security: 'Security and Justice Collaboration',
   rights: 'Minimum Rights of Users Charter',
   practices: 'Commercial Practices Code',
+  profeco: 'PROFECO Approval Office',
   wab: 'Whatsapp',
   wabLink: 'https://api.whatsapp.com/send?text=Hi,%20I%20would%20like%20to%20receive%20information.%20&phone=13056776828',
   infographic: 'Enterpreuniship route',
@@ -66,6 +68,7 @@ function Footer() {
               <p><a className={styles.link} href='https://hubs.ly/Q020QKp_0' target='_blank'>{t.security}</a></p>
               <p><a className={styles.link} href='https://hubs.ly/Q020YG-s0' target='_blank'>{t.rights}</a></p>
               <p><a className={styles.link} href='https://hubs.ly/Q020YFcy0' target='_blank'>{t.practices}</a></p>
+              <p><a className={styles.link} href='https://hubs.ly/Q028Jd8y0' target='_blank'>{t.profeco}</a></p>
             </div>
           </div>
 
